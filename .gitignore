@@ -1,0 +1,19 @@
+# Windows
+Thumbs.db
+desktop.ini
+
+# Mac
+.DS_Store
+_notes
+._*
+
+# Node
+node_modules/
+
+# PhpStorm
+.idea
+.vscode
+
+dist
+dist-ssr
+*.local

@@ -1,0 +1,26 @@
+{
+  "name": "christian-doering.de",
+  "version": "0.0.1",
+  "scripts": {
+    "serve": "cross-env NODE_ENV=production node server",
+    "dev": "node server",
+    "build:client": "vite build --outDir dist/client --ssrManifest",
+    "build:server": "vite build --outDir dist/server --ssr src/entry-server.js "
+  },
+  "dependencies": {
+    "compression": "^1.7.4",
+    "express": "^4.17.2",
+    "sass": "^1.49.7",
+    "vue": "^3.2.25",
+    "vue-meta": "^3.0.0-alpha.9",
+    "vue-router": "^4.0.12"
+  },
+  "devDependencies": {
+    "@types/node": "^17.0.15",
+    "@vitejs/plugin-vue": "^2.0.0",
+    "cross-env": "^7.0.3",
+    "typescript": "^4.4.4",
+    "vite": "^2.7.2",
+    "vue-tsc": "^0.29.8"
+  }
+}
