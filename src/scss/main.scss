@@ -1,14 +1,21 @@
 @import "variables";
+@import "modules";
+@import "components";
 
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+* {
+  box-sizing: border-box;
 }
 
-.green {
-  color: $green;
+html,
+body {
+  min-height: 100%;
+  background: #232736;
+}
+
+body {
+  font-size: 18px;
+  line-height: 22px;
+  font-family: "Inter", sans-serif;
+  margin: 0;
+  color: #efefef;
 }

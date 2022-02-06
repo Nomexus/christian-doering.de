@@ -9,15 +9,13 @@ import {
 const pages = import.meta.glob('../pages/*.vue')
 
 const routes = Object.keys(pages).map((path) => {
+    // ToDo: Language routing
     // @ts-ignore
     const name = path.match(/\.\/pages(.*)\.vue$/)[1].toLowerCase()
 
     return {
         path: name === '/home' ? '/' : name,
-        component: pages[path], // () => import('./pages/*.vue'),
-        meta: {
-            title: "test"
-        }
+        component: pages[path],
     }
 })
 

@@ -1,0 +1,15 @@
+.meta-navigation {
+  margin: 15px 0;
+
+  > a {
+    display: inline-block;
+    margin: 0 5px;
+    font-size: 13px;
+    cursor: pointer;
+    transition: all 0.15s ease-in-out;
+
+    &.active {
+      color: $link-active;
+    }
+  }
+}

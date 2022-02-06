@@ -1,5 +1,5 @@
 <template>
-  <h1>{{ t("misc.myName") }}</h1>
+  <h1>{{ t("navbar.projects") }}</h1>
 </template>
 
 <script setup lang="ts">
@@ -9,6 +9,6 @@ import {useI18n} from "vue-i18n";
 const {t} = useI18n()
 
 useMeta({
-  title: t("navbar.overview"),
+  title: t("navbar.projects"),
 })
 </script>

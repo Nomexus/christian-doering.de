@@ -1,0 +1,11 @@
+.navbar {
+  > a {
+    display: inline-block;
+    margin: 0 10px;
+    font-size: 22px;
+
+    &.router-link-active {
+      color: $link-active;
+    }
+  }
+}
