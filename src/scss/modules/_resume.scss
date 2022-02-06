@@ -1,0 +1,96 @@
+.resume-default {
+  margin-top: 2.5rem;
+
+  h2 {
+    margin: 1.5rem 0 1.5rem;
+    padding: 0 0 1rem 20rem;
+    border-bottom: 4px solid $link-active;
+  }
+}
+
+.resume-default-row {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+
+  .resume-default-row-left {
+    min-width: 18rem;
+    font-family: "Inter", sans-serif;
+    font-weight: 600;
+    font-size: 1.125rem;
+    text-align: right;
+    margin: 0 2rem 0 0;
+    padding: 0 0 0.5rem;
+    border-bottom: 2px solid $link-active;
+  }
+
+  .resume-default-row-right {
+    flex-grow: 1;
+  }
+
+  .resume-default-title {
+    margin: 0 0 1rem;
+  }
+
+  .resume-default-where {
+    margin: 0 0 1rem;
+    display: block;
+  }
+
+  .resume-default-content {
+    ul {
+      margin: 0 0 1rem;
+      padding: 0 0 0 1.25rem;
+
+      li {
+        padding: 0 0 0.25rem;
+      }
+
+      li > ul {
+        margin: 0;
+      }
+    }
+  }
+}
+
+.resume-personal {
+  display: flex;
+  flex-direction: row;
+
+  > img {
+    max-width: 16rem;
+    width: 100%;
+    height: auto;
+  }
+
+  h1 {
+    margin-top: 0;
+  }
+
+  h2 {
+    margin: 1.5rem 0 1.5rem;
+    padding: 0 0 1rem;
+    border-bottom: 4px solid $link-active;
+  }
+}
+
+.resume-personal-content {
+  padding-left: 2rem;
+  flex-grow: 1;
+}
+
+.resume-personal-row {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 0.375rem;
+  align-items: flex-start;
+}
+
+.resume-personal-title {
+  min-width: 16rem;
+}
+
+.resume-personal-value {
+  flex-grow: 1;
+}

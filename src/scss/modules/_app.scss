@@ -1,6 +1,13 @@
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.content {
+  margin-top: 70px;
+
+  @media(max-width: 1240px) {
+    padding: 20px;
+  }
 }
