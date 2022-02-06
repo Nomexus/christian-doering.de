@@ -4,7 +4,11 @@ export const de = {
         resume: "Lebenslauf",
         projects: "Projekte",
     },
+    footer: {
+        imprint: "Impressum",
+        dataPrivacy: "Datenschutz",
+    },
     misc: {
         myName: "Christian Döring",
-    }
+    },
 }

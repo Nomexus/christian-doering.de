@@ -4,6 +4,10 @@ export const en = {
         resume: "Resume",
         projects: "Projects",
     },
+    footer: {
+        imprint: "Imprint",
+        dataPrivacy: "Data Privacy",
+    },
     misc: {
         myName: "Christian Döring",
     }
