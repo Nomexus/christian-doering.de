@@ -12,7 +12,15 @@
       </PersonalRow>
       <PersonalRow title="Geboren" value="02.01.1991 in Mühlhausen/Thüringen"/>
       <PersonalRow title="Tel." value="+49 151 401 205 31"/>
-      <PersonalRow title="Email" value="info@harvest-time.de"/>
+      <PersonalRow title="Email">
+        <!-- ToDo: Obfuscate for automated spam crawler -->
+        info@harvest-time.de
+      </PersonalRow>
+      <PersonalRow title="LinkedIn">
+        <a href="https://www.linkedin.com/in/christian-doering/" target="_blank">
+          linkedin.com/in/christian-doering
+        </a>
+      </PersonalRow>
     </div>
   </div>
   <div class="resume-default">
