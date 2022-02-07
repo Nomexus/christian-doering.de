@@ -2,11 +2,18 @@
   <h1 class="text-center">{{ t("navbar.projects") }}</h1>
 
   <div class="tech-filter text-center">
-    <!-- ToDo: filter function -->
-    <Badge v-for="badge in allBadges" :key="badge" :type="badge"/>
+    <!-- ToDo: active class -->
+    <Badge @click="filter()"
+           text="alle" css-class="all"/>
+    <Badge @click="filter(badge)" v-for="badge in allBadges" :key="badge"
+           :text="badge" :css-class="badge"/>
   </div>
 
-  <Project v-for="project in projects" :key="project.title" :title="project.title" :badges="project.badges">
+  <Project v-for="project in shownProjects" :key="project.title"
+           :show="project.show"
+           :title="project.title"
+           :badges="project.badges"
+           :link="project.link">
     <div v-html="project.description"></div>
   </Project>
 </template>
@@ -14,8 +21,9 @@
 <script setup lang="ts">
 import {useMeta} from "vue-meta";
 import {useI18n} from "vue-i18n";
-import Project from "../components/Project.vue";
-import Badge from "../components/Badge.vue";
+import Project from "@/components/Project.vue";
+import Badge from "@/components/Badge.vue";
+import {ref} from "vue";
 
 const {t} = useI18n()
 
@@ -23,8 +31,11 @@ useMeta({
   title: t("navbar.projects"),
 })
 
+// ToDo: move projects to locales
 const projects = [
   {
+    link: null,
+    show: true,
     title: "FarmParadies 2009 - 2018",
     badges: [
       "php",
@@ -36,6 +47,8 @@ const projects = [
         "      consetetur sadipscing elitr, sed diam</p>"
   },
   {
+    link: null,
+    show: true,
     title: "FarmParadies 2022 - now",
     badges: [
       "vue",
@@ -47,11 +60,13 @@ const projects = [
         "      consetetur sadipscing elitr, sed diam</p>"
   },
   {
+    link: "https://www.monumente-shop.de",
+    show: true,
     title: "Monumente Shop",
     badges: [
       "javascript",
       "symfony",
-      "scss",
+      "shopware 5",
     ],
     description: "<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et\n" +
         "      dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet\n" +
@@ -61,6 +76,8 @@ const projects = [
 ];
 
 const allBadges: string[] = [];
+let shownProjects = ref(projects);
+
 
 projects.filter((project) => {
   project.badges.filter((badge) => {
@@ -69,5 +86,24 @@ projects.filter((project) => {
     }
   })
 });
+
+allBadges.sort()
+
+function filter(badge: String | undefined = undefined) {
+  shownProjects.value = projects.filter((project) => {
+    if (badge === undefined || project.badges.filter((b) => b === badge).length) {
+      project.show = true;
+    } else {
+      project.show = false
+    }
+
+    return project
+  })
+}
+
+defineExpose({
+  shownProjects,
+  allBadges
+})
 
 </script>

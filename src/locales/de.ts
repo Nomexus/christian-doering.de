@@ -4,6 +4,10 @@ export const de = {
         contact: "Kontakt",
         projects: "Projekte",
     },
+    pageTitle: {
+        imprint: "Impressum",
+        dataPrivacy: "Datenschutz",
+    },
     footer: {
         imprint: "Impressum",
         dataPrivacy: "Datenschutz",

@@ -31,7 +31,7 @@
 <script setup lang="ts">
 import {useMeta} from "vue-meta";
 import {useI18n} from "vue-i18n";
-import PersonalRow from '../components/resume/PersonalRow.vue';
+import PersonalRow from '@/components/resume/PersonalRow.vue';
 
 const {t} = useI18n()
 

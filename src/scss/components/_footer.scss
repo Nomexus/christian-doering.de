@@ -1,6 +1,7 @@
 footer {
   text-align: center;
-  margin: 3rem 0;
+  margin: auto 0 3rem 0;
+  padding-top: 3rem;
 
   ul {
     margin: 0;
@@ -9,6 +10,10 @@ footer {
     li {
       margin: 0 0.5rem;
       display: inline-block;
+
+      a.router-link-active {
+        color: $link-active;
+      }
     }
   }
 }

@@ -1,5 +1,5 @@
 <template>
-  <h1>{{ t("pageTitle.dataPrivacy") }}</h1>
+  <h1 class="text-center">{{ t("pageTitle.dataPrivacy") }}</h1>
 </template>
 
 <script setup lang="ts">

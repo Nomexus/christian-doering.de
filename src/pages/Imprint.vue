@@ -1,5 +1,5 @@
 <template>
-  <h1>{{ t("pageTitle.imprint") }}</h1>
+  <h1 class="text-center">{{ t("pageTitle.imprint") }}</h1>
 </template>
 
 <script setup lang="ts">

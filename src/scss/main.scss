@@ -8,8 +8,8 @@
 
 html,
 body {
-  min-height: 100%;
   background: $background-color;
+  min-height: 90vh;
 
   ::-webkit-scrollbar {
     width: 6px;

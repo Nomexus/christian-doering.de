@@ -1,10 +1,10 @@
 <template>
   <div class="resume-default-row">
     <div v-if="!dateAsHeadline && date" class="resume-default-row-left">
-      {{ date }}
+      <span>{{ date }}</span>
     </div>
     <h3 v-if="dateAsHeadline && date" class="resume-default-row-left">
-      {{ date }}
+      <span>{{ date }}</span>
     </h3>
     <div class="resume-default-row-right">
       <h3 v-if="!dateAsHeadline && title" class="resume-default-title">{{ title }}</h3>
@@ -18,7 +18,6 @@
 
 
 <script setup lang="ts">
-import {defineProps} from "vue";
 
 defineProps({
   date: String,

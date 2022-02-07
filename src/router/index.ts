@@ -4,31 +4,27 @@ import {
     createWebHistory
 } from 'vue-router'
 
-// Auto generates routes from vue files under ./pages
-// https://vitejs.dev/guide/features.html#glob-import
-const pages = import.meta.glob('../pages/*.vue')
-
 const routes = [
     // ToDo: Language routing
     {
         path: "/",
-        component: () => import('../pages/Home.vue'),
+        component: () => import('@/pages/Home.vue'),
     },
     {
         path: "/contact",
-        component: () => import('../pages/Contact.vue'),
+        component: () => import('@/pages/Contact.vue'),
     },
     {
         path: "/projects",
-        component: () => import('../pages/Projects.vue'),
+        component: () => import('@/pages/Projects.vue'),
     },
     {
         path: "/imprint",
-        component: () => import('../pages/Imprint.vue'),
+        component: () => import('@/pages/Imprint.vue'),
     },
     {
         path: "/data-privacy",
-        component: () => import('../pages/DataPrivacy.vue'),
+        component: () => import('@/pages/DataPrivacy.vue'),
     }
 ]
 

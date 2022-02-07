@@ -1,19 +1,15 @@
 <template>
   <h1 class="text-center">Hi, ich bin Christian Döring</h1>
   <h2 class="text-center">Full-Stack Webentwickler</h2>
-  <div class="resume-default">
-    <h2>Mein Profil</h2>
-    <DefaultRow
-        date="01/1991 – jetzt">
-      <p>
-        Leidenschaftlicher Software-Entwickler mit über 13 Jahren Erfahrung in Planung, Leitung, Entwicklung und
-        Fertigstellung von großen und kleinen Projekten. Zu meinen bisherigen Erfolgen gehören das Entwickeln und
-        Betreiben eines Browsergames, Umsetzung und Release von über 30 Shopware Shops inkl. Entwicklung der Layouts und
-        Plugins, sowie das Entwickeln Interner und Externer Verwaltungssysteme auf Phalcon Basis. Ich teile gern mein
-        Wissen in der Ausbildung von Auszubildenden, Hilfestellungen bei Problemen und Fragen, sowie Einführung in neue
-        Systeme und Technologien.
-      </p>
-    </DefaultRow>
+  <div class="content-medium">
+    <p>
+      Leidenschaftlicher Software-Entwickler mit über 13 Jahren Erfahrung in Planung, Leitung, Entwicklung und
+      Fertigstellung von großen und kleinen Projekten. Zu meinen bisherigen Erfolgen gehören das Entwickeln und
+      Betreiben eines Browsergames, Umsetzung und Release von über 30 Shopware Shops inkl. Entwicklung der Layouts und
+      Plugins, sowie das Entwickeln Interner und Externer Verwaltungssysteme auf Phalcon Basis. Ich teile gern mein
+      Wissen in der Ausbildung von Auszubildenden, Hilfestellungen bei Problemen und Fragen, sowie Einführung in neue
+      Systeme und Technologien.
+    </p>
   </div>
   <div class="resume-default">
     <h2>Berufserfahrung</h2>
@@ -137,7 +133,7 @@
 <script setup lang="ts">
 import {useMeta} from "vue-meta";
 import {useI18n} from "vue-i18n";
-import DefaultRow from "../components/resume/DefaultRow.vue";
+import DefaultRow from "@/components/resume/DefaultRow.vue";
 
 const {t} = useI18n()
 
