@@ -9,7 +9,6 @@
         Prinz-Regent-Str. 111<br>
         44795 Bochum
       </PersonalRow>
-      <PersonalRow title="Geboren" value="02.01.1991 in Mühlhausen/Thüringen"/>
       <PersonalRow title="Tel." value="+49 151 401 205 31"/>
       <PersonalRow title="Email">
         <!-- ToDo: Obfuscate for automated spam crawler -->
@@ -18,6 +17,11 @@
       <PersonalRow title="LinkedIn">
         <a href="https://www.linkedin.com/in/christian-doering/" target="_blank">
           linkedin.com/in/christian-doering
+        </a>
+      </PersonalRow>
+      <PersonalRow title="Github">
+        <a href="https://github.com/Nomexus" target="_blank">
+          github.com/Nomexus
         </a>
       </PersonalRow>
     </div>

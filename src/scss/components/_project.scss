@@ -1,0 +1,19 @@
+.project {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  margin-bottom: 3rem;
+}
+
+.project-content {
+  flex-grow: 1;
+  padding-left: 2rem;
+
+  h2 {
+    margin-top: 0;
+  }
+}
+
+.tech-filter {
+  margin-bottom: 2rem;
+}

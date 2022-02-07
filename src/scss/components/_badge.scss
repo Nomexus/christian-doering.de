@@ -1,0 +1,14 @@
+.badge {
+  display: inline-block;
+  background-color: $link-active;
+  color: $background-color;
+  border-radius: 0.25rem;
+  font-size: 0.75rem;
+  padding: 0.0625rem 0.25rem;
+  font-weight: 600;
+  cursor: default;
+
+  + .badge {
+    margin-left: 0.375rem;
+  }
+}
