@@ -1,8 +1,8 @@
 <template>
   <div class="navbar">
-    <router-link to="/">{{ t("navbar.overview") }}</router-link>
-    <router-link to="/resume">{{ t("navbar.resume") }}</router-link>
+    <router-link to="/">{{ t("navbar.home") }}</router-link>
     <router-link to="/projects">{{ t("navbar.projects") }}</router-link>
+    <router-link to="/contact">{{ t("navbar.contact") }}</router-link>
   </div>
 </template>
 

@@ -1,6 +1,7 @@
 <template>
   <MetaNavigation/>
   <Navbar/>
+  <!-- ToDo: page transitions -->
   <router-view v-slot="{ Component }">
     <Suspense>
       <div class="content">
@@ -9,7 +10,7 @@
     </Suspense>
   </router-view>
   <Footer />
-  <!-- ToDo: Generates hydration mismatch -->
+  <!-- ToDo: generates hydration mismatch -->
   <metainfo>
     <template v-slot:title="{ content }">{{ content }} - Christian Döring</template>
   </metainfo>

@@ -1,8 +1,8 @@
 export const en = {
     navbar: {
-        overview: "Overview",
-        resume: "Resume",
+        home: "About me",
         projects: "Projects",
+        contact: "Contact",
     },
     footer: {
         imprint: "Imprint",

@@ -1,5 +1,5 @@
 #app {
-  max-width: 75rem;
+  max-width: $page-width;
   width: 100%;
   margin: 0 auto;
 }
@@ -7,7 +7,7 @@
 .content {
   margin-top: 5rem;
 
-  @media(max-width: 77.5rem) {
+  @media(max-width: $page-padding-breakpoint) {
     padding: 0 1.25rem;
   }
 }

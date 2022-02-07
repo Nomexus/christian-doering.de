@@ -1,7 +1,10 @@
 .meta-navigation {
   margin: 1rem 0;
-  text-align: center;
-  padding: 0 1.25rem;
+  text-align: right;
+
+  @media(max-width: $page-padding-breakpoint) {
+    padding: 0 1.25rem;
+  }
 
   > a {
     display: inline-block;

@@ -67,17 +67,17 @@
   h1 {
     margin-top: 0;
   }
-
-  h2 {
-    margin: 1.5rem 0 1.5rem;
-    padding: 0 0 1rem;
-    border-bottom: 0.25rem solid $link-active;
-  }
 }
 
 .resume-personal-content {
   padding-left: 2rem;
   flex-grow: 1;
+
+  h1, h2 {
+    margin: 1.5rem 0 1.5rem;
+    padding: 0 0 1rem;
+    border-bottom: 0.25rem solid $link-active;
+  }
 }
 
 .resume-personal-row {

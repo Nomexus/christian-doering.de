@@ -1,7 +1,7 @@
 export const de = {
     navbar: {
-        overview: "Übersicht",
-        resume: "Lebenslauf",
+        home: "Über mich",
+        contact: "Kontakt",
         projects: "Projekte",
     },
     footer: {
