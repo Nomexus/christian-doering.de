@@ -10,7 +10,7 @@ const routes = [
     // ToDo: default route without param
     {
         path: "/:locale",
-        component: () => import('@/pages/Contact.vue'),
+        component: () => import('@/pages/Home.vue'),
     },
     {
         path: "/:locale/contact",
