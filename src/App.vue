@@ -17,11 +17,11 @@
 </template>
 
 <script setup>
-import "./scss/main.scss";
+import "@/scss/main.scss";
 import {useMeta} from "vue-meta";
-import Navbar from "./components/Navbar.vue";
-import MetaNavigation from "./components/MetaNavigation.vue";
-import Footer from "./components/Footer.vue";
+import Navbar from "@/components/Navbar.vue";
+import MetaNavigation from "@/components/MetaNavigation.vue";
+import Footer from "@/components/Footer.vue";
 
 useMeta({
   htmlAttrs: {lang: 'de'}
