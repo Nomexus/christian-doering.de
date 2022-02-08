@@ -3,10 +3,8 @@
 
   <div class="tech-filter text-center">
     <!-- ToDo: active class -->
-    <Badge @click="filter()"
-           text="alle" css-class="all"/>
-    <Badge @click="filter(badge)" v-for="badge in allBadges" :key="badge"
-           :text="badge" :css-class="badge"/>
+    <Badge @click="filter(badge.name)" v-for="badge in allBadges" :key="badge.name"
+           :text="badge.name" :css-class="badge.active ? badge.name + ' is-active' : badge.name"/>
   </div>
 
   <Project v-for="project in shownProjects" :key="project.title"
@@ -35,7 +33,7 @@ useMeta({
 const projects = [
   {
     link: null,
-    show: true,
+    show: "",
     title: "FarmParadies 2009 - 2018",
     badges: [
       "php",
@@ -48,7 +46,7 @@ const projects = [
   },
   {
     link: null,
-    show: true,
+    show: "",
     title: "FarmParadies 2022 - now",
     badges: [
       "vue",
@@ -61,7 +59,7 @@ const projects = [
   },
   {
     link: "https://www.monumente-shop.de",
-    show: true,
+    show: "",
     title: "Monumente Shop",
     badges: [
       "javascript",
@@ -75,29 +73,46 @@ const projects = [
   },
 ];
 
-const allBadges: string[] = [];
+const allBadges: { name: string; active: boolean; }[] = [
+  {
+    name: "alle",
+    active: true,
+  }
+];
+
 let shownProjects = ref(projects);
 
 
 projects.filter((project) => {
   project.badges.filter((badge) => {
-    if (!allBadges.includes(badge)) {
-      allBadges.push(badge)
+    if (!allBadges.filter((b) => b.name == badge).length) {
+      allBadges.push({
+        name: badge,
+        active: false
+      })
     }
   })
 });
 
 allBadges.sort()
 
-function filter(badge: String | undefined = undefined) {
+function filter(badge: String) {
   shownProjects.value = projects.filter((project) => {
-    if (badge === undefined || project.badges.filter((b) => b === badge).length) {
-      project.show = true;
+    if (
+        badge === "alle" ||
+        project.badges.filter((b) => b === badge).length
+    ) {
+      if (project.show !== "")
+        project.show = "is-visible"
     } else {
-      project.show = false
+      project.show = "is-hidden"
     }
 
     return project
+  })
+
+  allBadges.filter((b) => {
+    b.name === badge ? b.active = true : b.active = false
   })
 }
 

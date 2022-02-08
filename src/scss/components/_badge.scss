@@ -7,8 +7,22 @@
   padding: 0.0625rem 0.25rem;
   font-weight: 600;
   cursor: default;
+  border: 2px solid $link-active;
+  transition: all 0.3s ease-in-out;
 
   + .badge {
     margin-left: 0.375rem;
+    margin-bottom: 0.375rem;
+  }
+
+  .tech-filter & {
+    background-color: transparent;
+    border: 2px solid $link-active;
+    color: $link-active;
+
+    &.is-active {
+      background-color: $link-active;
+      color: $background-color;
+    }
   }
 }
