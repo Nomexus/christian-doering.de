@@ -3,13 +3,13 @@
   <Navbar/>
   <!-- ToDo: page transitions -->
   <router-view v-slot="{ Component }">
-    <Suspense>
-      <div class="content">
+    <transition name="slide">
+      <div class="content" :key="$route.path">
         <component :is="Component"/>
       </div>
-    </Suspense>
+    </transition>
   </router-view>
-  <Footer />
+  <Footer/>
   <!-- ToDo: generates hydration mismatch -->
   <metainfo>
     <template v-slot:title="{ content }">{{ content }} - Christian Döring</template>

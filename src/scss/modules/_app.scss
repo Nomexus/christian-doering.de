@@ -10,6 +10,7 @@
 
 .content {
   margin-top: 5rem;
+  position: relative;
 
   @media(max-width: $page-padding-breakpoint) {
     padding: 0 1.25rem;
@@ -19,4 +20,23 @@
 .content-medium {
   max-width: 50rem;
   margin: 0 auto;
+}
+
+.slide-leave-active {
+  transition: left 0.400s ease;
+  left: 0;
+}
+
+.slide-leave-to {
+  left: 100%;
+}
+
+.slide-enter-active {
+  transition: right 0.400s ease;
+  transition-delay: 0.400s;
+  right: 0;
+}
+
+.slide-enter-from {
+  right: 100%;
 }

@@ -6,6 +6,11 @@
   box-sizing: border-box;
 }
 
+html {
+  width:100vw;
+  overflow-x:hidden;
+}
+
 html,
 body {
   background: $background-color;
