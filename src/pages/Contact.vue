@@ -1,41 +1,36 @@
 <template>
-  <div class="resume-personal">
-    <img width="400" height="500" src="https://via.placeholder.com/400x500" alt="Christian Döring"
-         title="Christian Döring">
-    <div class="resume-personal-content">
-      <h1>{{ t("navbar.home") }}</h1>
-      <PersonalRow title="Name" value="Christian Döring"/>
-      <PersonalRow title="Anschrift">
-        Prinz-Regent-Str. 111<br>
-        44795 Bochum
-      </PersonalRow>
-      <PersonalRow title="Tel." value="+49 151 401 205 31"/>
-      <PersonalRow title="Email">
-        <!-- ToDo: Obfuscate for automated spam crawler -->
-        info@harvest-time.de
-      </PersonalRow>
-      <PersonalRow title="LinkedIn">
-        <a href="https://www.linkedin.com/in/christian-doering/" target="_blank">
-          linkedin.com/in/christian-doering
+  <div class="content">
+    <div class="contact content-medium text-center">
+      <h1>{{ t("navbar.contact") }}</h1>
+
+      <p>
+        Sollte ich dein Interesse geweckt haben, dann melde dich doch einfach bei mir! :)
+      </p>
+
+      <a class="h2" href="mailto:kontakt@christian-doering.de">kontakt@christian-doering.de</a>
+
+      <div class="contact-icons">
+        <a rel="noopener nofollow" href="https://www.linkedin.com/in/christian-doering/" target="_blank">
+          <img src="@/assets/icons/linkedin-icon.svg" alt="LinkedIn Logo">
+          <span>linkedin.com</span>
         </a>
-      </PersonalRow>
-      <PersonalRow title="Github">
-        <a href="https://github.com/Nomexus" target="_blank">
-          github.com/Nomexus
+        <a rel="noopener nofollow" href="https://github.com/Nomexus" target="_blank">
+          <img src="@/assets/icons/GitHub-Mark-Light-120px-plus.png" alt="Github Logo">
+          <span>github.com</span>
         </a>
-      </PersonalRow>
+      </div>
     </div>
   </div>
 </template>
 
 <script setup lang="ts">
-import {useMeta} from "vue-meta";
 import {useI18n} from "vue-i18n";
-import PersonalRow from '@/components/resume/PersonalRow.vue';
+import {setMeta} from "@/services/meta";
 
 const {t} = useI18n()
 
-useMeta({
-  title: t("navbar.contact"),
+setMeta({
+  title: t(`meta.contact.title`),
+  description: t("meta.contact.description")
 })
 </script>

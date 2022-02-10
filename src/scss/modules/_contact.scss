@@ -1,0 +1,21 @@
+.contact-icons {
+  display: flex;
+  justify-content: center;
+  margin-top: 4rem;
+
+  a {
+    display: block;
+    padding: 0 1rem;
+    text-align: center;
+  }
+
+  span {
+    display: block;
+    margin-top: 0.5rem;
+  }
+
+  img {
+    max-width: 80px;
+    display: inline-block;
+  }
+}

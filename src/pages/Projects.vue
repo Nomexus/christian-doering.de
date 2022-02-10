@@ -1,32 +1,34 @@
 <template>
-  <h1 class="text-center">{{ t("navbar.projects") }}</h1>
+  <div class="content">
+    <h1 class="text-center">{{ t("navbar.projects") }}</h1>
 
-  <div class="tech-filter text-center">
-    <!-- ToDo: active class -->
-    <Badge @click="filter(badge.name)" v-for="badge in allBadges" :key="badge.name"
-           :text="badge.name" :css-class="badge.active ? badge.name + ' is-active' : badge.name"/>
+    <div class="tech-filter text-center">
+      <Badge @click="filter(badge.name)" v-for="badge in allBadges" :key="badge.name"
+             :text="badge.name" :css-class="badge.active ? badge.name + ' is-active' : badge.name"/>
+    </div>
+
+    <Project v-for="project in shownProjects" :key="project.title"
+             :show="project.show"
+             :title="project.title"
+             :badges="project.badges"
+             :link="project.link">
+      <div v-html="project.description"></div>
+    </Project>
   </div>
-
-  <Project v-for="project in shownProjects" :key="project.title"
-           :show="project.show"
-           :title="project.title"
-           :badges="project.badges"
-           :link="project.link">
-    <div v-html="project.description"></div>
-  </Project>
 </template>
 
 <script setup lang="ts">
-import {useMeta} from "vue-meta";
 import {useI18n} from "vue-i18n";
 import Project from "@/components/Project.vue";
 import Badge from "@/components/Badge.vue";
 import {ref} from "vue";
+import {setMeta} from "@/services/meta";
 
 const {t} = useI18n()
 
-useMeta({
-  title: t("navbar.projects"),
+setMeta({
+  title: t(`meta.projects.title`),
+  description: t("meta.projects.description")
 })
 
 // ToDo: move projects to locales
@@ -38,6 +40,7 @@ const projects = [
     badges: [
       "php",
       "mysql",
+      "javascript",
     ],
     description: "<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et\n" +
         "      dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet\n" +
@@ -51,6 +54,8 @@ const projects = [
     badges: [
       "vue",
       "symfony",
+      "php",
+      "mysql"
     ],
     description: "<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et\n" +
         "      dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet\n" +
@@ -58,13 +63,25 @@ const projects = [
         "      consetetur sadipscing elitr, sed diam</p>"
   },
   {
-    link: "https://www.monumente-shop.de",
     show: "",
-    title: "Monumente Shop",
+    title: "Projekt-, Aufgaben- & Zeitmanagement System",
     badges: [
       "javascript",
-      "symfony",
-      "shopware 5",
+      "phalcon",
+      "mysql",
+    ],
+    description: "<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et\n" +
+        "      dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet\n" +
+        "      clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet,\n" +
+        "      consetetur sadipscing elitr, sed diam</p>"
+  },
+  {
+    show: "",
+    title: "Shopware und Wordpress API",
+    badges: [
+      "javascript",
+      "phalcon",
+      "mysql",
     ],
     description: "<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et\n" +
         "      dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet\n" +

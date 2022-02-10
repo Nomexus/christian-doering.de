@@ -4,6 +4,26 @@
     "contact": "Kontakt",
     "projects": "Projekte"
   },
+  "meta": {
+    "home": {
+      "title": "Über mich",
+      "description": "Portfolio Website von Christian Döring, Full-Stack Web-Developer"
+    },
+    "projects": {
+      "title": "Projekte",
+      "description": "Vue, Phalcon und Symfony Projekte von Christian Döring, Full-Stack Web-Developer"
+    },
+    "contact": {
+      "title": "Kontakt",
+      "description": "Kontakt Informationen von Christian Döring, Full-Stack Web-Developer"
+    },
+    "imprint": {
+      "title": "Impressum"
+    },
+    "data-privacy": {
+      "title": "Datenschutz"
+    }
+  },
   "pageTitle": {
     "imprint": "Impressum",
     "dataPrivacy": "Datenschutz"

@@ -38,7 +38,7 @@ export async function render(url, manifest) {
     // which we can then use to determine what files need to be preloaded for this
     // request.
     const preloadLinks = renderPreloadLinks(ctx.modules, manifest)
-    return [html, preloadLinks, ctx]
+    return [html, preloadLinks, ctx, router]
 }
 
 function renderPreloadLinks(modules, manifest) {
@@ -81,7 +81,6 @@ function renderPreloadLink(file) {
     } else if (file.endsWith('.png')) {
         return ` <link rel="preload" href="${file}" as="image" type="image/png">`
     } else {
-        // TODO
         return ''
     }
 }

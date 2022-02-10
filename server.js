@@ -66,7 +66,7 @@ async function createServer(
                 render = require('./dist/server/entry-server.js').render
             }
 
-            const [appHtml, preloadLinks, ctx] = await render(url, manifest)
+            const [appHtml, preloadLinks, ctx, router] = await render(url, manifest)
 
             if (!ctx.teleports) {
                 ctx.teleports = {}
@@ -81,6 +81,7 @@ async function createServer(
                 .replace(`{{ head }}`, ctx.teleports.head || '')
                 .replace(`{{ bodyPrepend }}`, ctx.teleports['body-prepend'] || '')
                 .replace(`{{ bodyAppend }}`, ctx.teleports.body || '')
+                .replace(`{{ locale }}`, router.currentRoute.value.params.locale || '')
 
             res.status(200).set({ 'Content-Type': 'text/html' }).end(html)
         } catch (e) {

@@ -1,7 +1,10 @@
 <template>
   <div class="meta-navigation">
-    <!-- ToDo: switch current page, dont go to home -->
+    <a rel="noopener nofollow" href="https://www.linkedin.com/in/christian-doering/" target="_blank">Github</a>
+    <a rel="noopener nofollow" href="https://github.com/Nomexus/christian-doering.de" target="_blank">LinkedIn</a>
+    |
     <router-link
+        :hreflang="l"
         v-for="l in SUPPORT_LOCALES" :key="l"
         :class="locale === l ? 'active': ''"
         :to="`/${l}/${routeWithoutParam($route.path)}`"

@@ -1,4 +1,3 @@
-import {nextTick} from 'vue'
 import {createI18n, I18n, I18nOptions} from 'vue-i18n'
 
 export const SUPPORT_LOCALES = ['de', 'en']
@@ -23,7 +22,8 @@ export function setI18nLanguage(i18n: I18n, locale: string) {
     }
 
     if (typeof document !== "undefined") {
-        document.querySelector('html')?.setAttribute('lang', locale)
+        // @ts-ignore
+        document.querySelector('html').setAttribute('lang', locale)
     }
 }
 
@@ -35,6 +35,4 @@ export async function loadLocaleMessages(i18n: I18n, locale: string) {
 
     // set locale and locale message
     i18n.global.setLocaleMessage(locale, messages)
-
-    return nextTick()
 }
