@@ -69,7 +69,7 @@
     },
     "project_system": {
       "title": "Projekt-, Aufgaben- & Zeitmanagement System",
-      "description": "<p>Projektmanagement-Software zum Verwalten von Kunden, Projekte, Aufgaben und Zeiten basierend auf <code>PhalconPHP</code>.</p>"
+      "description": "<p>Projektmanagement-Software zum Verwalten von Kunden, Projekten, Aufgaben und Zeiten basierend auf <code>PhalconPHP</code>.</p>"
     },
     "api_tools": {
       "title": "Shopware und Wordpress API",
