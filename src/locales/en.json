@@ -62,23 +62,23 @@
     "all": "all",
     "farmparadies_2009": {
       "title": "FarmParadies 2009 - 2018",
-      "description": "<p>FarmParadies was a browser-based farm game build with plain <code>PHP</code>, <code>MySQL</code> and <code>jQuery</code>. This game was my first big project where I learned to love programming.</p>"
+      "description": "<p>FarmParadies was a browser-based farm game built with plain <code>PHP</code>, <code>MySQL</code> and <code>jQuery</code>. This game was my first big project where I learned to love programming.</p>"
     },
     "farmparadies_2022": {
       "title": "FarmParadies 2022 - now (WIP)",
-      "description": "<p>Relaunch of the browsergame build with <code>Vue</code> and <code>Symfony</code>. Currently in development.</p>"
+      "description": "<p>Relaunch of the browsergame built with <code>Vue</code> and <code>Symfony</code>. Currently in development.</p>"
     },
     "project_system": {
       "title": "Project-, Task- & Timemanagement System",
-      "description": "<p>Project management software to manage clients, projects, tasks and times build with <code>PhalconPHP</code>.</p>"
+      "description": "<p>Project management software to manage clients, projects, tasks and times built with <code>PhalconPHP</code>.</p>"
     },
     "api_tools": {
       "title": "Shopware and Wordpress API",
-      "description": "<p>\nSoftware for connecting Shopware and Wordpress systems to manage versions, plugins, servers and other statistics. Build with <code>PhalconPHP</code>.</p>"
+      "description": "<p>\nSoftware for connecting Shopware and Wordpress systems to manage versions, plugins, servers and other statistics. Built with <code>PhalconPHP</code>.</p>"
     },
     "recipes_book": {
       "title": "recipes.book - recipes page for healthy food (WIP)",
-      "description": "<p>Website for sharing recipes publicly or privately, with a focus on healthy eating. Build with <code>Vue</code> and <code>Symphony</code> Currently in development.</p>"
+      "description": "<p>Website for sharing recipes publicly or privately, with a focus on healthy eating. Built with <code>Vue</code> and <code>Symphony</code> Currently in development.</p>"
     }
   }
 }
