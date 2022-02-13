@@ -5,9 +5,9 @@
     "projects": "Projekte"
   },
   "meta": {
+    "default": "Christian Döring - Full-Stack Webentwickler",
     "home": {
-      "title": "Über mich",
-      "description": "Portfolio Website von Christian Döring, Full-Stack Web-Developer"
+      "description": "Portfolio Website von Christian Döring, Full-Stack Webentwickler spezialisiert auf Shopware 5, Shopware 6, Vue, Symfony"
     },
     "projects": {
       "title": "Projekte",
@@ -34,5 +34,50 @@
   },
   "misc": {
     "myName": "Christian Döring"
+  },
+  "home": {
+    "greeting": "<span>Hi, ich bin </span>Christian Döring",
+    "intro": "<p>Leidenschaftlicher Software-Entwickler, spezialisiert auf <code>Shopware</code>, <code>Phalcon</code>, <code>Symfony</code> und <code>Vue</code>. Über 13 Jahre Erfahrung in der Entwicklung und Veröffentlichung von großen und kleinen Projekten.</p>",
+    "title": "Full-Stack Webentwickler",
+    "myExperience": "Meine Berufserfahrung",
+    "allProjects": "Alle Projekte",
+    "currentProjects": "Aktuelle Projekte",
+    "openForNewChallenges": "Offen für neue Herausforderungen"
+  },
+  "experience": {
+    "ow": {
+      "title": "Senior-Webentwickler<br>(seit 2018, devor Webentwickler)",
+      "employer": "service & media online-werbung GmbH, Bad Schwartau"
+    },
+    "ht": {
+      "title": "Nebenberuflich selbstständig",
+      "employer": "Harvest-Time GbR"
+    }
+  },
+  "contact": {
+    "description": "Sollte ich dein Interesse geweckt haben, dann melde dich doch einfach bei mir! :)"
+  },
+  "projects": {
+    "all": "alle",
+    "farmparadies_2009": {
+      "title": "FarmParadies 2009 - 2018",
+      "description": "<p>FarmParadies war ein Browserbasiertes Bauernhof Spiel auf Basis von Plain <code>PHP</code/>, <code>MySQL</code> und <code>jQuery</code>. Dieses Spiel war mein erstes großes Projekt an dem ich das Programmieren lieben gelernt habe.</p>"
+    },
+    "farmparadies_2022": {
+      "title": "FarmParadies 2022 - heute (WIP)",
+      "description": "<p>Relaunch des Browsergames auf der Basis von <code>Vue</code> und <code>Symfony</code>. Derzeit in Entwicklung.</p>"
+    },
+    "project_system": {
+      "title": "Projekt-, Aufgaben- & Zeitmanagement System",
+      "description": "<p>Projektmanagement-Software zum Verwalten von Kunden, Projekte, Aufgaben und Zeiten basierend auf <code>PhalconPHP</code>.</p>"
+    },
+    "api_tools": {
+      "title": "Shopware und Wordpress API",
+      "description": "<p>Software zum Anbinden von Shopware- und Wordpress-Systemen zur Verwaltung von Versionen, Plugins, Servern und weiteren Statistiken. Basiert auf <code>PhalconPHP</code>.</p>"
+    },
+    "recipes_book": {
+      "title": "recipes.book - Rezeptseite für gesunde Ernährung (WIP)",
+      "description": "<p>Website zum öffentlichen oder privaten Teilen von Rezepten, mit Fokus auf gesunde Ernährung. Basiert auf <code>Vue</code> und <code>Symphony</code>. Derzeit in Entwicklung.</p>"
+    }
   }
 }

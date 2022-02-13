@@ -9,12 +9,9 @@
 }
 
 .content {
-  margin-top: 5rem;
+  margin-top: 4.375rem;
   position: relative;
-
-  @media(max-width: $page-padding-breakpoint) {
-    padding: 0 1.25rem;
-  }
+  padding: 0 2rem;
 }
 
 .content-medium {
@@ -23,19 +20,43 @@
 }
 
 .slide-leave-active {
-  transition: left 0.400s ease;
-  left: 0;
-}
-
-.slide-leave-to {
-  left: 100%;
-}
-
-.slide-enter-active {
-  transition: right 0.400s ease;
+  transition: right 0.250s ease;
   right: 0;
 }
 
-.slide-enter-from {
+.slide-leave-to {
   right: 100%;
+}
+
+.slide-enter-active {
+  transition: left 0.250s ease;
+  left: 0;
+}
+
+.slide-enter-from {
+  left: 100%;
+}
+
+code {
+  background: #30364d;
+  padding: 0.0667rem 0.25rem;
+  border-radius: 4px;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.button,
+.cta-button {
+  display: inline-block;
+  color: $link-active;
+  border: 2px solid $link-active;
+  border-radius: 5px;
+  cursor: pointer;
+  padding: .75rem;
+}
+
+.cta-button {
+  padding: 1.5rem;
 }

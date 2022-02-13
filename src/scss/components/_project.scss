@@ -1,11 +1,11 @@
 @keyframes fadeOut {
   0% {
-    opacity:1;
+    opacity: 1;
     max-height: 5000px;
     left: 0;
   }
   100% {
-    opacity:0;
+    opacity: 0;
     max-height: 0;
     left: -2000px;
   }
@@ -13,25 +13,51 @@
 
 @keyframes fadeIn {
   100% {
-    opacity:1;
+    opacity: 1;
     max-height: 5000px;
     left: 0;
   }
   0% {
-    opacity:0;
+    opacity: 0;
     max-height: 0;
     left: -2000px;
   }
 }
 
+.projects-home {
+  display: flex;
+  flex-wrap: wrap;
+}
+
 .project {
   position: relative;
 
+  img {
+    box-shadow: -1rem -1rem 0 rgba(0, 0, 0, 0.15);
+    border-radius: 5px;
+    height: auto;
+    margin-bottom: 1rem;
+
+    @media(min-width: $mobile-landscape-breakpoint) {
+      width: auto;
+      margin: 0;
+    }
+  }
+
   .inner {
     padding-bottom: 3rem;
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
+
+    @media(min-width: $mobile-landscape-breakpoint) {
+      display: flex;
+      flex-direction: row;
+      align-items: flex-start;
+    }
+  }
+
+  &:last-child {
+    .inner {
+      padding-bottom: 0;
+    }
   }
 
   &.is-visible {
@@ -40,7 +66,7 @@
 
   &.is-hidden {
     animation: fadeOut 700ms;
-    opacity:0;
+    opacity: 0;
     max-height: 0;
     left: -1620px;
   }
@@ -49,11 +75,23 @@
     display: inline-block;
     margin-bottom: 1rem;
   }
+
+
+  .projects-home & {
+    padding-right: 2rem;
+
+    @media(min-width: $tablet-breakpoint) {
+      padding-left: 20%;
+    }
+  }
 }
 
 .project-content {
   flex-grow: 1;
-  padding-left: 2rem;
+
+  @media(min-width: $mobile-landscape-breakpoint) {
+    padding-left: 2rem;
+  }
 
   h2 {
     margin-top: 0;

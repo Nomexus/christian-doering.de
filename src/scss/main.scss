@@ -1,6 +1,7 @@
 @import "variables";
 @import "modules";
 @import "components";
+@import "modules/helper";
 
 * {
   box-sizing: border-box;
@@ -38,7 +39,7 @@ body {
 
 body {
   font-size: 1.125rem;
-  line-height: 1.375rem;
+  line-height: 1.612rem;
   font-family: "Inter", sans-serif;
   margin: 0;
   color: #e0e4f6;

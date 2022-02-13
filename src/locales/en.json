@@ -1,10 +1,11 @@
 {
-    "navbar": {
-        "home": "About me",
-        "projects": "Projects",
-        "contact": "Contact"
-    },
+  "navbar": {
+    "home": "About me",
+    "projects": "Projects",
+    "contact": "Contact"
+  },
   "meta": {
+    "default": "Christian Döring - Full-Stack Webdeveloper",
     "home": {
       "title": "About me",
       "description": "Portfolio website of Christian Döring, Full-Stack Web-Developer"
@@ -24,15 +25,60 @@
       "title": "Data privacy"
     }
   },
-    "pageTitle": {
-        "imprint": "Imprint",
-        "dataPrivacy": "Data privacy"
+  "pageTitle": {
+    "imprint": "Imprint",
+    "dataPrivacy": "Data privacy"
+  },
+  "footer": {
+    "imprint": "Imprint",
+    "dataPrivacy": "Data Privacy"
+  },
+  "misc": {
+    "myName": "Christian Döring"
+  },
+  "home": {
+    "greeting": "<span>Hi, i'm</span>Christian Döring",
+    "intro": "<p>Passionate software developer specializing in <code>Shopware</code>, <code>Phalcon</code>, <code>Symfony</code> and <code>Vue</code>. Over 13 years experience in developing and publishing large- and small-scale projects.</p>",
+    "title": "Full-Stack Webdeveloper",
+    "myExperience": "Professional experience",
+    "allProjects": "All Projects",
+    "currentProjects": "Current Projects",
+    "openForNewChallenges": "Open for new challenges"
+  },
+  "experience": {
+    "ow": {
+      "title": "Senior-Webdeveloper<br>(since 2018, previous Webdeveloper)",
+      "employer": "service & media online-werbung GmbH, Bad Schwartau"
     },
-    "footer": {
-        "imprint": "Imprint",
-        "dataPrivacy": "Data Privacy"
-    },
-    "misc": {
-        "myName": "Christian Döring"
+    "ht": {
+      "title": "Part-time self-employed",
+      "employer": "Harvest-Time GbR"
     }
+  },
+  "contact": {
+    "description": "If you are interested, just get in touch with me! :)"
+  },
+  "projects": {
+    "all": "all",
+    "farmparadies_2009": {
+      "title": "FarmParadies 2009 - 2018",
+      "description": "<p>FarmParadies was a browser-based farm game build with plain <code>PHP</code>, <code>MySQL</code> and <code>jQuery</code>. This game was my first big project where I learned to love programming.</p>"
+    },
+    "farmparadies_2022": {
+      "title": "FarmParadies 2022 - now (WIP)",
+      "description": "<p>Relaunch of the browsergame build with <code>Vue</code> and <code>Symfony</code>. Currently in development.</p>"
+    },
+    "project_system": {
+      "title": "Project-, Task- & Timemanagement System",
+      "description": "<p>Project management software to manage clients, projects, tasks and times build with <code>PhalconPHP</code>.</p>"
+    },
+    "api_tools": {
+      "title": "Shopware and Wordpress API",
+      "description": "<p>\nSoftware for connecting Shopware and Wordpress systems to manage versions, plugins, servers and other statistics. Build with <code>PhalconPHP</code>.</p>"
+    },
+    "recipes_book": {
+      "title": "recipes.book - recipes page for healthy food (WIP)",
+      "description": "<p>Website for sharing recipes publicly or privately, with a focus on healthy eating. Build with <code>Vue</code> and <code>Symphony</code> Currently in development.</p>"
+    }
+  }
 }

@@ -9,16 +9,20 @@ import {I18n} from "vue-i18n";
 const routes = [
     // ToDo: default route without param
     {
+        path: "/",
+        component: () => import('@/pages/Home.vue'),
+    },
+    {
         path: "/:locale",
         component: () => import('@/pages/Home.vue'),
     },
     {
-        path: "/:locale/contact",
-        component: () => import('@/pages/Contact.vue'),
-    },
-    {
         path: "/:locale/projects",
         component: () => import('@/pages/Projects.vue'),
+    },
+    {
+        path: "/:locale/contact",
+        component: () => import('@/pages/Contact.vue'),
     },
     {
         path: "/:locale/imprint",
@@ -39,6 +43,10 @@ export function createRouter(i18n: I18n) {
     })
 
     router.beforeEach(async (to, from, next) => {
+        if(typeof window !== "undefined") {
+            window.scrollTo(0, 0)
+        }
+
         const paramsLocale = to.params.locale
 
         if (typeof paramsLocale === "undefined" || typeof paramsLocale === "object") {

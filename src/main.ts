@@ -20,7 +20,8 @@ export function createApp() {
     const i18n = setupI18n({
         legacy: false,
         locale: 'de',
-        fallbackLocale: 'en'
+        fallbackLocale: 'en',
+        warnHtmlMessage: false
     });
 
     loadLocaleMessages(i18n, "de").then(_ => {})

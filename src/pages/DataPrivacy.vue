@@ -210,5 +210,5 @@ const {t} = useI18n()
 setMeta({
   title: t(`meta.data-privacy.title`),
   description: t("meta.home.description")
-})
+}, t)
 </script>
