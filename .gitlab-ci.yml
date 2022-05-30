@@ -20,7 +20,7 @@ build:
       - node_modules
 
 deploy:
-  image: alpine
+  image: node:16.15.0
   stage: deploy
   only:
     - main
