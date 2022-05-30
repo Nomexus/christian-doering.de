@@ -14,7 +14,7 @@ production_deploy:
   only:
     - main
   script:
-    - ssh-add <(echo "$STAGING_PRIVATE_KEY")
+    - ssh-add <(echo "$PRIVATE_KEY")
     - ssh -p22 $USER@$HOST "mkdir /var/www/vhosts/christian-doering.de/httpdocs/_dist"
     - ssh -p22 $USER@$HOST "mkdir /var/www/vhosts/christian-doering.de/httpdocs/_node_modules"
     - scp -P22 -r dist/* $USER@$HOST:/var/www/vhosts/christian-doering.de/httpdocs/_dist
