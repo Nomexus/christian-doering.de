@@ -15,10 +15,10 @@ production_deploy:
     - main
   script:
     - ssh-add <(echo "$PRIVATE_KEY")
-    - ssh -p22 $USER@$HOST "mkdir /var/www/vhosts/christian-doering.de/httpdocs/tmp"
+    - ssh -p22 $USER@$HOST "mkdir -p /var/www/vhosts/christian-doering.de/httpdocs/tmp"
     - ssh -p22 $USER@$HOST "touch /var/www/vhosts/christian-doering.de/httpdocs/tmp/restart.txt"
-    - ssh -p22 $USER@$HOST "mkdir /var/www/vhosts/christian-doering.de/httpdocs/_dist"
-    - ssh -p22 $USER@$HOST "mkdir /var/www/vhosts/christian-doering.de/httpdocs/_node_modules"
+    - ssh -p22 $USER@$HOST "mkdir -p /var/www/vhosts/christian-doering.de/httpdocs/_dist"
+    - ssh -p22 $USER@$HOST "mkdir -p /var/www/vhosts/christian-doering.de/httpdocs/_node_modules"
     - scp -P22 -r dist/* $USER@$HOST:/var/www/vhosts/christian-doering.de/httpdocs/_dist
     - scp -P22 -r node_modules/* $USER@$HOST:/var/www/vhosts/christian-doering.de/httpdocs/_node_modules
     - ssh -p22 $USER@$HOST "rm -rf /var/www/vhosts/christian-doering.de/httpdocs/dist && rm -rf /var/www/vhosts/christian-doering.de/httpdocs/node_modules"
