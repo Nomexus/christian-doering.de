@@ -1,0 +1,23 @@
+image: node:16.15.0
+
+before_script:
+  - apt-get update
+  - npm install
+  - npm run build:client
+  - npm run build:server
+  - 'which ssh-agent || ( apt-get update -y && apt-get install openssh-client -y )'
+  - mkdir -p ~/.ssh
+  - eval $(ssh-agent -s)
+  - '[[ -f /.dockerenv ]] && echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config'
+
+production_deploy:
+  only:
+    - main
+  script:
+    - ssh-add <(echo "$STAGING_PRIVATE_KEY")
+    - ssh -p22 $USER@$HOST "mkdir /var/www/vhosts/christian-doering.de/httpdocs/_dist"
+    - ssh -p22 $USER@$HOST "mkdir /var/www/vhosts/christian-doering.de/httpdocs/_node_modules"
+    - scp -P22 -r dist/* $USER@$HOST:/var/www/vhosts/christian-doering.de/httpdocs/_dist
+    - scp -P22 -r node_modules/* $USER@$HOST:/var/www/vhosts/christian-doering.de/httpdocs/_node_modules
+    - ssh -p22 $USER@$HOST "rm -rf /var/www/vhosts/christian-doering.de/httpdocs/dist && rm -rf /var/www/vhosts/christian-doering.de/httpdocs/node_modules"
+    - ssh -p22 $USER@$HOST "mv /var/www/vhosts/christian-doering.de/httpdocs/_dist /var/www/vhosts/christian-doering.de/httpdocs/dist && mv /var/www/vhosts/christian-doering.de/httpdocs/_node_modules /var/www/vhosts/christian-doering.de/httpdocs/node_modules"
