@@ -1,6 +1,3 @@
-include:
-  template: Verify/Browser-Performance.gitlab-ci.yml
-
 stages:
   - build
   - deploy
