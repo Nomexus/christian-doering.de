@@ -1,7 +1,6 @@
 stages:
   - build
   - deploy
-  - performance
 
 build:
   image: node:16.15.0
@@ -36,23 +35,3 @@ deploy:
     - scp -P22 -r node_modules/* $USER@$HOST:$DEPLOY_PATH/_node_modules
     - ssh -p22 $USER@$HOST "rm -rf $DEPLOY_PATH/dist && rm -rf $DEPLOY_PATH/node_modules"
     - ssh -p22 $USER@$HOST "mv $DEPLOY_PATH/_dist $DEPLOY_PATH/dist && mv $DEPLOY_PATH/_node_modules $DEPLOY_PATH/node_modules"
-
-browser_performance:
-  stage: performance
-  image: docker:git
-  variables:
-    URL: https://www.christian-doering.de
-    SITESPEED_VERSION: 14.1.0
-    SITESPEED_OPTIONS: ''
-  script:
-    - mkdir gitlab-exporter
-    - wget -O ./gitlab-exporter/index.js https://gitlab.com/gitlab-org/gl-performance/raw/1.1.0/index.js
-    - mkdir sitespeed-results
-    - docker run --shm-size=1g --rm -v "$(pwd)":/sitespeed.io sitespeedio/sitespeed.io:$SITESPEED_VERSION --plugins.add ./gitlab-exporter --outputFolder sitespeed-results $URL $SITESPEED_OPTIONS
-    - mv sitespeed-results/data/performance.json performance.json
-  artifacts:
-    paths:
-      - performance.json
-      - sitespeed-results/
-    reports:
-      performance: performance.json
