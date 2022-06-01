@@ -4,7 +4,7 @@
     <h2 class="text-center styled mb-4 mt-0">{{ t('home.title') }}</h2>
     <div class="content-medium text-center mb-2" v-html="t('home.intro')"/>
     <div class="content-medium text-center mb-0">
-      <router-link class="cta-button" :to="`/${locale}/contact`">{{ t('home.openForNewChallenges') }}</router-link>
+      <router-link class="cta-button" :to="`/${locale}/contact`">{{ t('home.contactMe') }}</router-link>
     </div>
     <ContentDivider class="mb-4 mt-4" />
     <h2 class="h1 mb-4 mt-0 pl-2 styled ml--2-mobile-landscape">{{ t('home.myExperience') }}</h2>
@@ -91,7 +91,7 @@
     <ContentDivider class="mb-4 mt-4" />
     <h2 class="h1 mt-0 mb-3 text-center">{{ t('navbar.contact') }}</h2>
     <div class="text-center">
-      <router-link class="cta-button" :to="`/${locale}/contact`">{{ t('home.openForNewChallenges') }}</router-link>
+      <router-link class="cta-button" :to="`/${locale}/contact`">{{ t('home.contactMe') }}</router-link>
     </div>
   </div>
 </template>
