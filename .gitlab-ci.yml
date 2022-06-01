@@ -41,11 +41,12 @@ deploy:
     - eval $(ssh-agent -s)
     - '[[ -f /.dockerenv ]] && echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config'
     - ssh-add <(echo "$PRIVATE_KEY")
-    - ssh -p22 $USER@$HOST "mkdir -p $DEPLOY_PATH/tmp"
-    - ssh -p22 $USER@$HOST "touch $DEPLOY_PATH/tmp/restart.txt"
     - ssh -p22 $USER@$HOST "mkdir -p $DEPLOY_PATH/_dist"
     - ssh -p22 $USER@$HOST "mkdir -p $DEPLOY_PATH/_node_modules"
     - scp -P22 -r dist/* $USER@$HOST:$DEPLOY_PATH/_dist
+    - scp -P22 server.js $USER@$HOST:$DEPLOY_PATH/
     - scp -P22 -r node_modules/* $USER@$HOST:$DEPLOY_PATH/_node_modules
     - ssh -p22 $USER@$HOST "rm -rf $DEPLOY_PATH/dist && rm -rf $DEPLOY_PATH/node_modules"
     - ssh -p22 $USER@$HOST "mv $DEPLOY_PATH/_dist $DEPLOY_PATH/dist && mv $DEPLOY_PATH/_node_modules $DEPLOY_PATH/node_modules"
+    - ssh -p22 $USER@$HOST "mkdir -p $DEPLOY_PATH/tmp"
+    - ssh -p22 $USER@$HOST "touch $DEPLOY_PATH/tmp/restart.txt"
