@@ -46,7 +46,9 @@ async function createServer(
         app.use(require('compression')())
         app.use(
             require('serve-static')(resolve('dist/client'), {
-                index: false
+                index: false,
+                immutable: true,
+                maxAge: "7d"
             })
         )
     }

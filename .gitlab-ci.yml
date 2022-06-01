@@ -1,5 +1,6 @@
 stages:
   - build
+  - test
   - deploy
 
 build:
@@ -14,6 +15,19 @@ build:
     paths:
       - dist
       - node_modules
+
+npm-audit:
+  image: "registry.gitlab.com/gitlab-org/security-products/analyzers/npm-audit:1.4.0"
+  stage: test
+  variables:
+    TOOL: npm
+  script:
+    - /analyzer run
+  artifacts:
+    reports:
+      dependency_scanning: gl-dependency-scanning-report.json
+    paths:
+      - gl-dependency-scanning-report.json
 
 deploy:
   image: node:16.15.0
