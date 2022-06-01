@@ -1,6 +1,10 @@
 include:
   template: Verify/Browser-Performance.gitlab-ci.yml
 
+variables:
+    DOCKER_HOST: "tcp://docker:2375"
+    DOCKER_TLS_CERTDIR: ""
+
 services:
   - docker:dind
 
