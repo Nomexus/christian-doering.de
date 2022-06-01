@@ -1,16 +1,78 @@
 version: '3'
 
+volumes:
+  mysqldata: {}
+  page_volume:
+    driver: local
+
+networks:
+  web2:
+    driver: bridge
+
 services:
-  node:
-    image: "node:16"
-    user: "node"
-    working_dir: /home/node/app
+  web:
+    image: nginx:1.22.0
+    ports:
+      - "${DOCKER_WEB_PORT}:80"
+    expose:
+      - "80"
+    volumes:
+      - ./docker/nginx.conf:/etc/nginx/conf.d/default.conf
+      - ./:/var/www/html:cached
+    links:
+      - php
+    container_name: web
+    depends_on:
+      - mariadb
+    networks:
+      - web2
+  php:
+    build:
+      context: .
+      dockerfile: ./docker/PHP.Dockerfile
+      args:
+        - NODE_VERSION=${DOCKER_NODE_VERSION}
+        - PHP_VERSION=${DOCKER_PHP_VERSION}
+    volumes:
+      - ./docker/php.ini:/usr/local/etc/php/conf.d/docker-php.ini
+      - page_volume:/var/www/html
+    container_name: php
     environment:
       - NODE_ENV=development
-    volumes:
-      - ./:/home/node/app
-    expose:
-      - "3000"
+      - CHOKIDAR_USEPOLLING=true
+      - CHOKIDAR_INTERVAL=100
     ports:
-      - "3000:3000"
-    command: "npm run dev"
+      - "22:22"
+      - "${DOCKER_NODE_PORT}:3000"
+      - "24678:24678"
+    depends_on:
+      - mariadb
+    networks:
+      - web2
+  mariadb:
+    image: mariadb:latest
+    environment:
+      MYSQL_ROOT_PASSWORD: "${DOCKER_DB_PASSWORD}"
+      MYSQL_USER: "${DOCKER_DB_USER}"
+      MYSQL_DATABASE: "${DOCKER_DB_DATABASE}"
+    volumes:
+      - mysqldata:/var/lib/mysql
+    container_name: mariadb
+    networks:
+      - web2
+  phpmyadmin:
+    image: phpmyadmin:latest
+    depends_on:
+      - mariadb
+    ports:
+      - "${DOCKER_PHPMYADMIN_PORT}:80"
+    environment:
+      -PMA_HOST: mariadb
+      -MYSQL_ROOT_PASSWORD: "${DOCKER_DB_PASSWORD}"
+      -PMA_USER: "${DOCKER_DB_USER}"
+      -PMA_PASSWORD: "${DOCKER_DB_PASSWORD}"
+    container_name: phpmyadmin
+    links:
+      - mariadb:db
+    networks:
+      - web2
