@@ -69,8 +69,7 @@
       Prinz-Regent-Str. 111<br/>
       44795 Bochum</p>
 
-    <p>Telefon: +49 234 85 99 53 60<br/>
-      E-Mail: kontakt@christian-doering.de</p>
+    <p>E-Mail: kontakt@christian-doering.de</p>
     <p>Verantwortliche Stelle ist die nat&uuml;rliche oder juristische Person, die allein oder gemeinsam mit anderen
       &uuml;ber die Zwecke und Mittel der Verarbeitung von personenbezogenen Daten (z.&nbsp;B. Namen, E-Mail-Adressen o.
       &Auml;.) entscheidet.</p>
