@@ -12,7 +12,6 @@
 
       <h2>Kontakt</h2>
       <p>
-        Telefon: +49 234 85 99 53 60<br/>
         E-Mail: kontakt@christian-doering.de
       </p>
     </div>
