@@ -1,6 +1,6 @@
 {
   "name": "christian-doering.de",
-  "version": "0.0.1",
+  "version": "1.0.1",
   "scripts": {
     "serve": "cross-env NODE_ENV=production node server",
     "dev": "node server",
@@ -22,7 +22,7 @@
     "@vitejs/plugin-vue": "^2.3.3",
     "cross-env": "^7.0.3",
     "typescript": "^4.7.2",
-    "vite": "^2.9.9",
+    "vite": "^2.9.13",
     "vue-tsc": "^0.35.2"
   }
 }

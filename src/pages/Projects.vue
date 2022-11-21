@@ -29,14 +29,13 @@ const projects = [
   {
     link: null,
     show: "",
-    title: t("projects.farmparadies_2009.title"),
-    img: "/img/projects/farmparadies-2009",
+    title: t("projects.recipes_book.title"),
+    img: "/img/projects/recipes-book",
     badges: [
-      "php",
-      "mysql",
-      "jquery",
+      "vue",
+      "symfony",
     ],
-    description: t("projects.farmparadies_2009.description")
+    description: t("projects.recipes_book.description"),
   },
   {
     link: null,
@@ -48,6 +47,18 @@ const projects = [
       "symfony"
     ],
     description: t("projects.farmparadies_2022.description"),
+  },
+  {
+    link: null,
+    show: "",
+    title: t("projects.farmparadies_2009.title"),
+    img: "/img/projects/farmparadies-2009",
+    badges: [
+      "php",
+      "mysql",
+      "jquery",
+    ],
+    description: t("projects.farmparadies_2009.description")
   },
   {
     link: null,
@@ -70,17 +81,6 @@ const projects = [
       "phalcon",
     ],
     description: t("projects.api_tools.description"),
-  },
-  {
-    link: null,
-    show: "",
-    title: t("projects.recipes_book.title"),
-    img: "/img/projects/recipes-book",
-    badges: [
-      "vue",
-      "symfony",
-    ],
-    description: t("projects.recipes_book.description"),
   },
 ];
 

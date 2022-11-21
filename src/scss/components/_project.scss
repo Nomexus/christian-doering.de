@@ -75,15 +75,6 @@
     display: inline-block;
     margin-bottom: 1rem;
   }
-
-
-  .projects-home & {
-    padding-right: 2rem;
-
-    @media(min-width: $tablet-breakpoint) {
-      padding-left: 20%;
-    }
-  }
 }
 
 .project-content {

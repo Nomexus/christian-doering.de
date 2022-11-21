@@ -1,4 +1,5 @@
 {
+  "current": "heute",
   "navbar": {
     "home": "Über mich",
     "contact": "Kontakt",
@@ -37,16 +38,24 @@
   },
   "home": {
     "greeting": "<span>Hi, ich bin </span>Christian Döring",
-    "intro": "<p>Leidenschaftlicher Software-Entwickler, spezialisiert auf <code>Shopware</code>, <code>Phalcon</code>, <code>Symfony</code> und <code>Vue</code>. Über 13 Jahre Erfahrung in der Entwicklung und Veröffentlichung von großen und kleinen Projekten.</p>",
+    "intro": "<p>Leidenschaftlicher Software-Entwickler, spezialisiert auf <code>Shopware</code>, <code>Phalcon</code>, <code>Symfony</code>, <code>ExtJS</code> und <code>Vue</code>. Über 14 Jahre Erfahrung in der Entwicklung und Veröffentlichung von großen und kleinen Projekten.</p>",
     "title": "Full-Stack Webentwickler",
-    "myExperience": "Meine Berufserfahrung",
-    "allProjects": "Alle Projekte",
+    "myExperience": "Berufserfahrung",
+    "allProjects": "Alle Projekte ansehen",
     "currentProjects": "Aktuelle Projekte",
     "contactMe": "Kontakt aufnehmen"
   },
   "experience": {
+    "npo": {
+      "title": "Webentwickler, Pentester",
+      "employer": "NPO Applications GmbH, Oberhausen"
+    },
     "ow": {
-      "title": "Senior-Webentwickler<br>(seit 2018, davor Webentwickler)",
+      "title": "Webentwickler",
+      "employer": "service & media online-werbung GmbH, Bad Schwartau"
+    },
+    "ow2": {
+      "title": "Senior-Webentwickler",
       "employer": "service & media online-werbung GmbH, Bad Schwartau"
     },
     "ht": {
@@ -64,7 +73,7 @@
       "description": "<p>FarmParadies war ein Browserbasiertes Bauernhof Spiel auf Basis von Plain <code>PHP</code/>, <code>MySQL</code> und <code>jQuery</code>. Dieses Spiel war mein erstes großes Projekt an dem ich das Programmieren lieben gelernt habe.</p>"
     },
     "farmparadies_2022": {
-      "title": "FarmParadies 2022 - heute (WIP)",
+      "title": "FarmParadies.de - Bauernhof Browsergame",
       "description": "<p>Relaunch des Browsergames auf der Basis von <code>Vue</code> und <code>Symfony</code>. Derzeit in Entwicklung.</p>"
     },
     "project_system": {
@@ -76,8 +85,8 @@
       "description": "<p>Software zum Anbinden von Shopware- und Wordpress-Systemen zur Verwaltung von Versionen, Plugins, Servern und weiteren Statistiken. Basiert auf <code>PhalconPHP</code>.</p>"
     },
     "recipes_book": {
-      "title": "recipes.book - Rezeptseite für gesunde Ernährung (WIP)",
-      "description": "<p>Website zum öffentlichen oder privaten Teilen von Rezepten, mit Fokus auf gesunde Ernährung. Basiert auf <code>Vue</code> und <code>Symphony</code>. Derzeit in Entwicklung.</p>"
+      "title": "rezepte-teilen.de - Rezeptseite für gesunde Ernährung",
+      "description": "<p>Website zum öffentlichen oder privaten Teilen von Rezepten. Basiert auf <code>Vue</code> und <code>Symphony</code>. Derzeit in Entwicklung.</p>"
     }
   }
 }

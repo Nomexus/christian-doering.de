@@ -1,8 +1,8 @@
 <template>
   <div class="meta-navigation">
     <div class="left">
-      <a rel="noopener nofollow" href="https://www.linkedin.com/in/christian-doering/" target="_blank">Github</a>
-      <a rel="noopener nofollow" href="https://github.com/Nomexus/christian-doering.de" target="_blank">LinkedIn</a>
+      <a rel="noopener nofollow" href="https://www.linkedin.com/in/christian-doering/" target="_blank">LinkedIn</a>
+      <a rel="noopener nofollow" href="https://github.com/Nomexus/christian-doering.de" target="_blank">Github</a>
     </div>
     <div class="right">
       <router-link

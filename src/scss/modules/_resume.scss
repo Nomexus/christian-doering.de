@@ -10,18 +10,9 @@
   }
 }
 
-.experience-home {
-  @media(min-width: $mobile-landscape-breakpoint) {
-    padding-left: 2rem;
-  }
-
-  @media(min-width: $tablet-breakpoint) {
-    padding-right: 20%;
-  }
-}
-
 .resume-default-row {
   margin-bottom: 1rem;
+  justify-content: center;
 
   @media(min-width: $tablet-breakpoint) {
     display: flex;
@@ -32,26 +23,34 @@
   .resume-default-row-left {
     font-family: "Inter", sans-serif;
     font-size: 1rem;
-    margin: 0 0 1rem 0;
+    padding: 0 0 1rem 0;
 
     @media(min-width: $tablet-breakpoint) {
       min-width: 16rem;
-      margin: 0 2rem 0 0;
-      text-align: right;
+      margin: 0 0 0 1rem;
+      width: 50%;
     }
 
-    span {
+    .resume-time {
       display: block;
-      border-bottom: 0.125rem solid $link-active;
-      padding: 0 0 0.5rem;
       margin-bottom: 0.5rem;
       font-weight: 600;
       font-size: 1.125rem;
     }
+
+    .resume-employer {
+      display: inline-block;
+      padding: 0.325rem 0 0;
+      border-top: 0.125rem solid $link-active;
+    }
   }
 
   .resume-default-row-right {
-    flex-grow: 1;
+    @media(min-width: $tablet-breakpoint) {
+      text-align: right;
+      padding: 0 1rem 0 0;
+      width: 50%;
+    }
   }
 
   .resume-default-title {

@@ -35,7 +35,7 @@ services:
         - PHP_VERSION=${DOCKER_PHP_VERSION}
     volumes:
       - ./docker/php.ini:/usr/local/etc/php/conf.d/docker-php.ini
-      - page_volume:/var/www/html
+      - ./:/var/www/html
     container_name: php
     environment:
       - NODE_ENV=development
