@@ -55,6 +55,18 @@ code {
   border-radius: 5px;
   cursor: pointer;
   padding: .75rem;
+  transition: all 0.25s ease-in-out;
+
+  &.small {
+    padding: 0.25rem 0.5rem;
+    font-size: 1rem;
+    border-width: 1px;
+  }
+
+  &:hover {
+    background-color: $link-active;
+    color: $background-color;
+  }
 }
 
 .cta-button {

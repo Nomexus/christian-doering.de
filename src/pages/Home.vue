@@ -19,7 +19,7 @@
     <div class="experience-home mt-0">
       <div class="resume-default">
         <DefaultRow
-            :date='"01/2018 – " + t("current")'
+            :date='"07/2022 – " + t("current")'
             :title="t('experience.npo.title')"
             :where="t('experience.npo.employer')">
         </DefaultRow>
@@ -74,10 +74,10 @@ const projects = [
     description: t("projects.farmparadies_2022.description"),
   },
   {
-    link: null,
+    link: 'https://www.rezepte-teilen.de',
     show: "",
     title: t("projects.recipes_book.title"),
-    img: "/img/projects/recipes-book",
+    img: "/img/projects/rezepte-teilen.de",
     badges: [
       "vue",
       "symfony",

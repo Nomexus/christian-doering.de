@@ -7,7 +7,8 @@
              :text="badge.name" :css-class="badge.active ? badge.name + ' is-active' : badge.name"/>
     </div>
 
-    <Project v-for="project in shownProjects" :key="project.title" :project="project" :show="project.show"/>
+    <Project v-for="project in shownProjects" :key="project.title" :project="project" :show="project.show"
+             @filter="(name) => filter(name)"/>
   </div>
 </template>
 
@@ -27,10 +28,10 @@ setMeta({
 
 const projects = [
   {
-    link: null,
+    link: 'https://www.rezepte-teilen.de',
     show: "",
     title: t("projects.recipes_book.title"),
-    img: "/img/projects/recipes-book",
+    img: "/img/projects/rezepte-teilen.de",
     badges: [
       "vue",
       "symfony",
@@ -107,7 +108,7 @@ projects.filter((project) => {
 
 allBadges.sort()
 
-const filter = function filter(badge: String) {
+function filter(badge: String) {
   shownProjects.value = projects.filter((project) => {
     if (
         badge === t("projects.all") ||
@@ -126,11 +127,5 @@ const filter = function filter(badge: String) {
     b.name === badge ? b.active = true : b.active = false
   })
 }
-
-defineExpose({
-  shownProjects,
-  allBadges,
-  filter
-})
 
 </script>

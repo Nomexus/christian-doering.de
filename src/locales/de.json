@@ -85,8 +85,8 @@
       "description": "<p>Software zum Anbinden von Shopware- und Wordpress-Systemen zur Verwaltung von Versionen, Plugins, Servern und weiteren Statistiken. Basiert auf <code>PhalconPHP</code>.</p>"
     },
     "recipes_book": {
-      "title": "rezepte-teilen.de - Rezeptseite für gesunde Ernährung",
-      "description": "<p>Website zum öffentlichen oder privaten Teilen von Rezepten. Basiert auf <code>Vue</code> und <code>Symphony</code>. Derzeit in Entwicklung.</p>"
+      "title": "rezepte-teilen.de - Rezepte mit deiner Familie und deinen Freunden teilen",
+      "description": "<p>Teile, verwalte und speichere deine Rezepte kostenlos mit deiner Familie und deinen Freunden! Basiert auf <code>Vue</code> und <code>Symphony</code>.</p>"
     }
   }
 }

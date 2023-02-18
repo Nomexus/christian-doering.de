@@ -1,6 +1,7 @@
 <template>
   <div class="project" :class="show">
     <div class="inner">
+      <a :href="project.link" target="_blank">
       <picture v-if="project.img">
         <source
             type="image/webp"
@@ -10,13 +11,14 @@
              :alt="project.title"
              :srcset="`${project.img}.jpg, ${project.img}@2x.jpg 2x`">
       </picture>
+      </a>
       <div class="project-content">
         <h2>{{ project.title }}</h2>
         <div v-html="project.description"></div>
-        <a v-if="project.link" class="show-project" :href="project.link" target="_blank">Projekt ansehen</a>
+        <a v-if="project.link" class="show-project button small" :href="project.link" target="_blank">zum Projekt</a>
         <div v-if="project.badges.length" class="badges">
           <template v-for="badge in project.badges" :key="badge">
-            <Badge @click="parentFilter(badge)" :text="badge" :css-class="`${badge} cursor-pointer`"/>
+            <Badge @click="$emit('filter', badge)" :text="badge" :css-class="`${badge} cursor-pointer`"/>
           </template>
         </div>
       </div>
@@ -26,28 +28,14 @@
 
 <script setup lang="ts">
 import Badge from '@/components/Badge.vue';
-import {getCurrentInstance} from "vue";
 
 const props = defineProps({
-  // ToDo: use typescript properly
   show: String,
   project: Object,
 });
 
+defineEmits(['filter']);
+
 props.project?.badges.sort()
-
-const instance = getCurrentInstance();
-
-function parentFilter(badge: String) {
-  if(
-      instance !== null &&
-      // @ts-ignore
-      typeof instance.ctx?.$parent?.filter !== "undefined"
-
-  ) {
-    // @ts-ignore
-    instance.ctx?.$parent?.filter(badge)
-  }
-}
 
 </script>
