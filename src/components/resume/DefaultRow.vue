@@ -1,7 +1,10 @@
 <template>
   <div class="resume-default-row">
     <div class="resume-default-row-right">
-      <h3 v-if="!dateAsHeadline && title" class="resume-default-title" v-html="title" />
+      <h3
+        v-if="!dateAsHeadline && title"
+        class="resume-default-title"
+        v-html="title" />
       <div v-if="$slots.default" class="resume-default-content">
         <slot></slot>
       </div>
@@ -17,9 +20,7 @@
   </div>
 </template>
 
-
 <script setup lang="ts">
-
 defineProps({
   date: String,
   title: String,
@@ -27,8 +28,7 @@ defineProps({
   content: String,
   dateAsHeadline: {
     type: Boolean,
-    default: false
-  }
-})
-
+    default: false,
+  },
+});
 </script>

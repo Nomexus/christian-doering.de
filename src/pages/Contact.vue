@@ -7,7 +7,9 @@
         {{ t("contact.description") }}
       </p>
 
-      <a class="h2" href="mailto:kontakt@christian-doering.de">kontakt@christian-doering.de</a>
+      <a class="h2" href="mailto:kontakt@christian-doering.de">
+        kontakt@christian-doering.de
+      </a>
 
       <div class="contact-icons">
         <a rel="noopener nofollow" href="https://www.linkedin.com/in/christian-doering/" target="_blank">
@@ -24,13 +26,16 @@
 </template>
 
 <script setup lang="ts">
-import {useI18n} from "vue-i18n";
-import {setMeta} from "@/services/meta";
+import { useI18n } from "vue-i18n";
+import { setMeta } from "@/services/meta";
 
-const {t} = useI18n()
+const { t } = useI18n();
 
-setMeta({
-  title: t(`meta.contact.title`),
-  description: t("meta.contact.description")
-}, t)
+setMeta(
+  {
+    title: t(`meta.contact.title`),
+    description: t("meta.contact.description")
+  },
+  t
+);
 </script>

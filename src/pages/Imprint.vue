@@ -5,27 +5,30 @@
     <div class="content-medium">
       <h2>Angaben gemäß § 5 TMG</h2>
       <p>
-        Christian Döring<br/>
-        Prinz-Regent-Str. 111<br/>
+        Christian Döring
+        <br />
+        Prinz-Regent-Str. 111
+        <br />
         44795 Bochum
       </p>
 
       <h2>Kontakt</h2>
-      <p>
-        E-Mail: kontakt@christian-doering.de
-      </p>
+      <p>E-Mail: kontakt@christian-doering.de</p>
     </div>
   </div>
 </template>
 
 <script setup lang="ts">
-import {useI18n} from "vue-i18n";
-import {setMeta} from "@/services/meta";
+import { useI18n } from "vue-i18n";
+import { setMeta } from "@/services/meta";
 
-const {t} = useI18n()
+const { t } = useI18n();
 
-setMeta({
-  title: t(`meta.imprint.title`),
-  description: t("meta.home.description")
-}, t)
+setMeta(
+  {
+    title: t(`meta.imprint.title`),
+    description: t("meta.home.description"),
+  },
+  t
+);
 </script>

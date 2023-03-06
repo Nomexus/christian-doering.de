@@ -95,8 +95,8 @@ const allBadges: { name: string; active: boolean; }[] = [
 let shownProjects = ref(projects);
 
 
-projects.filter((project) => {
-  project.badges.filter((badge) => {
+projects.forEach((project) => {
+  project.badges.forEach((badge) => {
     if (!allBadges.filter((b) => b.name == badge).length) {
       allBadges.push({
         name: badge,
@@ -123,7 +123,7 @@ function filter(badge: String) {
     return project
   })
 
-  allBadges.filter((b) => {
+  allBadges.forEach((b) => {
     b.name === badge ? b.active = true : b.active = false
   })
 }

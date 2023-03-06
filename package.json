@@ -1,9 +1,12 @@
 {
   "name": "christian-doering.de",
-  "version": "1.0.1",
+  "version": "1.0.2",
+  "private": true,
+  "type": "module",
   "scripts": {
+    "lint": "eslint src",
     "serve": "cross-env NODE_ENV=production node server",
-    "dev": "node server",
+    "dev": "node server.cjs",
     "build:client": "vite build --outDir dist/client --ssrManifest",
     "build:server": "vite build --outDir dist/server --ssr src/entry-server.js",
     "build": "npm run build:client && npm run build:server"
@@ -11,16 +14,27 @@
   "dependencies": {
     "compression": "^1.7.4",
     "express": "^4.18.1",
+    "helmet": "^6.0.1",
     "sass": "^1.52.1",
+    "serve-static": "^1.15.0",
     "vue": "^3.2.36",
     "vue-i18n": "^9.2.0-beta.35",
     "vue-meta": "^3.0.0-alpha.10",
     "vue-router": "^4.0.15"
   },
   "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.45.0",
+    "@vue/eslint-config-typescript": "^11.0.2",
+    "vue-eslint-parser": "^9.1.0",
+    "@typescript-eslint/parser": "^5.20.0",
     "@types/node": "^16.11.38",
     "@vitejs/plugin-vue": "^2.3.3",
+    "@babel/eslint-parser": "^7.19.1",
     "cross-env": "^7.0.3",
+    "eslint": "^8.28.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-vue": "^9.8.0",
     "typescript": "^4.7.2",
     "vite": "^2.9.13",
     "vue-tsc": "^0.35.2"

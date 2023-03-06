@@ -24,7 +24,7 @@ export function createApp() {
         warnHtmlMessage: false
     });
 
-    loadLocaleMessages(i18n, "de").then(_ => {})
+    loadLocaleMessages(i18n, "de").then(undefined)
 
     const app = createSSRApp(App)
     const router = createRouter(i18n)
