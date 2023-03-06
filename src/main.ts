@@ -1,38 +1,43 @@
-import App from '@/App.vue'
-import {createSSRApp} from 'vue'
-import {createRouter} from '@/router/'
-import {createMetaManager as createVueMetaManager, deepestResolver, defaultConfig} from 'vue-meta'
-import {loadLocaleMessages, setupI18n} from "@/services/i18n";
+import App from "@/App.vue";
+import { createSSRApp } from "vue";
+import { createRouter } from "@/router/";
+import {
+  createMetaManager as createVueMetaManager,
+  deepestResolver,
+  defaultConfig,
+} from "vue-meta";
+import { loadLocaleMessages, setupI18n } from "@/services/i18n";
 
 export function createApp() {
-    const createMetaManager = (isSSR = false) => createVueMetaManager(
-        isSSR,
-        {
-            ...defaultConfig,
-            esi: {
-                group: true,
-                namespaced: true,
-            }
+  const createMetaManager = (isSSR = false) =>
+    createVueMetaManager(
+      isSSR,
+      {
+        ...defaultConfig,
+        esi: {
+          group: true,
+          namespaced: true,
         },
-        deepestResolver
-    )
+      },
+      deepestResolver
+    );
 
-    const i18n = setupI18n({
-        legacy: false,
-        locale: 'de',
-        fallbackLocale: 'en',
-        warnHtmlMessage: false
-    });
+  const i18n = setupI18n({
+    legacy: false,
+    locale: "de",
+    fallbackLocale: "en",
+    warnHtmlMessage: false,
+  });
 
-    loadLocaleMessages(i18n, "de").then(undefined)
+  loadLocaleMessages(i18n, "de").then(undefined);
 
-    const app = createSSRApp(App)
-    const router = createRouter(i18n)
-    const metaManager = createMetaManager(import.meta.env.SSR)
+  const app = createSSRApp(App);
+  const router = createRouter(i18n);
+  const metaManager = createMetaManager(import.meta.env.SSR);
 
-    app.use(metaManager)
-    app.use(router)
-    app.use(i18n)
+  app.use(metaManager);
+  app.use(router);
+  app.use(i18n);
 
-    return {app, router, metaManager}
+  return { app, router, metaManager };
 }
