@@ -8,15 +8,15 @@
   "meta": {
     "default": "Christian Döring - Full-Stack Webentwickler",
     "home": {
-      "description": "Portfolio Website von Christian Döring, Full-Stack Webentwickler spezialisiert auf Shopware 5, Shopware 6, Vue, Symfony"
+      "description": "Christian Döring, Full-Stack Webentwickler, Ethical Hacker - spezialisiert auf PHP and JavaScript"
     },
     "projects": {
       "title": "Projekte",
-      "description": "Vue, Phalcon und Symfony Projekte von Christian Döring, Full-Stack Web-Developer"
+      "description": "Vue, Phalcon und Symfony Projekte von Christian Döring, Full-Stack Webentwickler"
     },
     "contact": {
       "title": "Kontakt",
-      "description": "Kontakt Informationen von Christian Döring, Full-Stack Web-Developer"
+      "description": "Kontakt Informationen von Christian Döring, Full-Stack Webentwickler"
     },
     "imprint": {
       "title": "Impressum"
@@ -38,8 +38,8 @@
   },
   "home": {
     "greeting": "<span>Hi, ich bin </span>Christian Döring",
-    "intro": "<p>Leidenschaftlicher Software-Entwickler, spezialisiert auf <code>Shopware</code>, <code>Phalcon</code>, <code>Symfony</code>, <code>ExtJS</code> und <code>Vue</code>. Über 14 Jahre Erfahrung in der Entwicklung und Veröffentlichung von großen und kleinen Projekten.</p>",
-    "title": "Full-Stack Webentwickler",
+    "intro": "<p>Leidenschaftlicher Software-Entwickler und Ethical Hacker, spezialisiert auf <code>Shopware</code>, <code>Symfony</code>, <code>Vue</code> und <code>ExtJS</code>. Über 14 Jahre Erfahrung in der Entwicklung und Veröffentlichung von großen und kleinen Projekten. Erfahrung in Web-App Pentesting.</p>",
+    "title": "Full-Stack Webentwickler - Ethical Hacker",
     "myExperience": "Berufserfahrung",
     "allProjects": "Alle Projekte ansehen",
     "currentProjects": "Aktuelle Projekte",
@@ -59,7 +59,7 @@
       "employer": "service & media online-werbung GmbH, Bad Schwartau"
     },
     "ht": {
-      "title": "Nebenberuflich selbstständig",
+      "title": "Browsergames Entwicklung und Betrieb",
       "employer": "Harvest-Time GbR"
     }
   },
