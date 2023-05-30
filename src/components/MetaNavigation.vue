@@ -9,6 +9,12 @@
       </a>
       <a
         rel="noopener nofollow"
+        href="https://www.xing.com/profile/Christian_Doering058740"
+        target="_blank">
+        XING
+      </a>
+      <a
+        rel="noopener nofollow"
         href="https://github.com/Nomexus/christian-doering.de"
         target="_blank">
         Github

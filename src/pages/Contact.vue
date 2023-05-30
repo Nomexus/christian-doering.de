@@ -12,12 +12,27 @@
       </a>
 
       <div class="contact-icons">
-        <a rel="noopener nofollow" href="https://www.linkedin.com/in/christian-doering/" target="_blank">
-          <img src="/img/icons/linkedin-icon.svg" alt="LinkedIn Logo">
+        <a
+          rel="noopener nofollow"
+          href="https://www.linkedin.com/in/christian-doering/"
+          target="_blank">
+          <img src="/img/icons/linkedin-icon.svg" alt="LinkedIn Logo" />
           <span>linkedin.com</span>
         </a>
-        <a rel="noopener nofollow" href="https://github.com/Nomexus" target="_blank">
-          <img src="/img/icons/GitHub-Mark-Light-120px-plus.png" alt="Github Logo">
+        <a
+          rel="noopener nofollow"
+          href="https://www.xing.com/profile/Christian_Doering058740"
+          target="_blank">
+          <img src="/img/icons/icons8-xing-80.svg" alt="XING Logo" />
+          <span>xing.com</span>
+        </a>
+        <a
+          rel="noopener nofollow"
+          href="https://github.com/Nomexus"
+          target="_blank">
+          <img
+            src="/img/icons/GitHub-Mark-Light-120px-plus.png"
+            alt="Github Logo" />
           <span>github.com</span>
         </a>
       </div>
@@ -34,7 +49,7 @@ const { t } = useI18n();
 setMeta(
   {
     title: t(`meta.contact.title`),
-    description: t("meta.contact.description")
+    description: t("meta.contact.description"),
   },
   t
 );
