@@ -9,15 +9,15 @@
     "default": "Christian Döring - Full-Stack Webdeveloper",
     "home": {
       "title": "About me",
-      "description": "Portfolio website of Christian Döring, Full-Stack Web-Developer"
+      "description": "Christian Döring, full stack web developer, ethical hacker, specializing in PHP and JavaScript"
     },
     "projects": {
       "title": "Projects",
-      "description": "Vue, Phalcon and Symfony projects of Christian Döring, Full-Stack Web-Developer"
+      "description": "Vue, Phalcon and Symfony projects of Christian Döring, full stack web developer"
     },
     "contact": {
       "title": "Contact",
-      "description": "Contact information of Christian Döring, Full-Stack Web-Developer"
+      "description": "Contact information of Christian Döring, full stack web developer"
     },
     "imprint": {
       "title": "Imprint"
@@ -39,8 +39,8 @@
   },
   "home": {
     "greeting": "<span>Hi, i'm</span>Christian Döring",
-    "intro": "<p>Passionate software developer specializing in <code>Shopware</code>, <code>Phalcon</code>, <code>Symfony</code>, <code>ExtJS</code> and <code>Vue</code>. Over 14 years experience in developing and publishing large- and small-scale projects.</p>",
-    "title": "Full-Stack Webdeveloper",
+    "intro": "<p>Passionate software developer and ethical hacker specializing in <code>Shopware</code>, <code>Symfony</code>, <code>Vue</code> and <code>ExtJS</code>. Over 14 years experience in developing and publishing large- and small-scale projects. Experienced in web app pentesting.</p>",
+    "title": "full-stack webdeveloper, ethical hacker",
     "myExperience": "Professional experience",
     "allProjects": "View all Projects",
     "currentProjects": "Current Projects",
@@ -60,7 +60,7 @@
       "employer": "service & media online-werbung GmbH, Bad Schwartau"
     },
     "ht": {
-      "title": "Part-time self-employed",
+      "title": "Browsergame development",
       "employer": "Harvest-Time GbR"
     }
   },
