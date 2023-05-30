@@ -14,6 +14,10 @@
 
       <h2>Kontakt</h2>
       <p>E-Mail: kontakt@christian-doering.de</p>
+      <h3>Bild- / Quellenangaben</h3>
+      <a target="_blank" href="https://icons8.com/icon/13979/xing">Xing</a>
+      icon by
+      <a target="_blank" href="https://icons8.com">Icons8</a>
     </div>
   </div>
 </template>
