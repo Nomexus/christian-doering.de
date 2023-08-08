@@ -136,7 +136,7 @@ async function createServer(
 if (!isTest) {
   createServer()
     .then(({ app }) =>
-      app.listen(3000, () => {
+      app.listen(8080, () => {
         console.log("http://localhost:8080");
       })
     )
