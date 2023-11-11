@@ -124,11 +124,12 @@ async function createServer(
 
       res.status(200).set({ "Content-Type": "text/html" }).end(html);
     } catch (e) {
-      vite && vite.ssrFixStacktrace(e);
+      console.log(e);
 
       if (process.env.NODE_ENV === "production") {
         res.status(500).end("An error occured");
       } else {
+        vite && vite.ssrFixStacktrace(e);
         res.status(500).end(e.stack);
       }
     }

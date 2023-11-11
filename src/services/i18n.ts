@@ -34,5 +34,5 @@ export async function loadLocaleMessages(i18n: I18n, locale: string) {
   );
 
   // set locale and locale message
-  i18n.global.setLocaleMessage(locale, messages);
+  i18n.global.setLocaleMessage(locale, messages.default);
 }
