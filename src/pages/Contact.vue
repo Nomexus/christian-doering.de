@@ -49,7 +49,10 @@ const { t } = useI18n();
 setMeta(
   {
     title: t(`meta.contact.title`),
-    description: t("meta.contact.description"),
+    meta: {
+      name: "description",
+      content: t("meta.contact.description"),
+    },
   },
   t
 );
