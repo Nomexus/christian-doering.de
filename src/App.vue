@@ -1,6 +1,5 @@
 <template>
   <div>
-    <metainfo></metainfo>
     <MetaNavigation />
     <Navbar />
     <router-view v-slot="{ Component }">

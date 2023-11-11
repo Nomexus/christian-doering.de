@@ -3,6 +3,7 @@ import path from "node:path";
 import helmet from "helmet";
 import express from "express";
 import { fileURLToPath } from "node:url";
+import { renderSSRHead } from "@unhead/ssr";
 
 const isTest = process.env.NODE_ENV === "test" || !!process.env.VITE_TEST_BUILD;
 
@@ -101,22 +102,25 @@ async function createServer(
         render = (await import("./dist/server/entry-server.js")).render;
       }
 
-      const [appHtml, preloadLinks, ctx, router] = await render(url, manifest);
+      const [appHtml, preloadLinks, ctx, router, head] = await render(
+        url,
+        manifest
+      );
 
       if (!ctx.teleports) {
         ctx.teleports = {};
       }
 
-      const html = template
+      let html = template
         .replace(`<!--preload-links-->`, preloadLinks)
         .replace(`<!--app-html-->`, appHtml)
-        .replace(`{{ htmlAttrs }}`, ctx.teleports.htmlAttrs || "")
-        .replace(`{{ headAttrs }}`, ctx.teleports.headAttrs || "")
-        .replace(`{{ bodyAttrs }}`, ctx.teleports.bodyAttrs || "")
-        .replace(`{{ head }}`, ctx.teleports.head || "")
-        .replace(`{{ bodyPrepend }}`, ctx.teleports["body-prepend"] || "")
-        .replace(`{{ bodyAppend }}`, ctx.teleports.body || "")
         .replace(`{{ locale }}`, router.currentRoute.value.params.locale || "");
+
+      const headPayload = await renderSSRHead(head);
+      Object.entries(headPayload).forEach(([key, value]) => {
+        html = html.replace(`{{ ${key} }}`, value);
+        html = html.replace(`<!--${key}-->`, value);
+      });
 
       res.status(200).set({ "Content-Type": "text/html" }).end(html);
     } catch (e) {

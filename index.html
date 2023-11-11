@@ -1,28 +1,27 @@
 <!DOCTYPE html>
 <html data-vue-meta-server-rendered lang="{{ locale }}" {{ htmlAttrs }}>
-<head {{ headAttrs }}>
-    <meta charset="UTF-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <link rel="apple-touch-icon" sizes="180x180" href="/img/apple-touch-icon.png?v=20230218">
-    <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32x32.png?v=20230218">
-    <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon-16x16.png?v=20230218">
-<!--    <link rel="manifest" href="/img/site.webmanifest?v=20230218">-->
-    <link rel="mask-icon" href="/img/safari-pinned-tab.svg?v=20230218" color="#232736">
-    <link rel="shortcut icon" href="/img/favicon.ico?v=20230218">
-    <meta name="msapplication-TileColor" content="#232736">
-    <meta name="theme-color" content="#ffffff">
-    <link rel="preload" href="/fonts/inter-v7-latin-regular.woff2" as="font" crossorigin="anonymous">
-    <link rel="preload" href="/fonts/inter-v7-latin-700.woff2" as="font" crossorigin="anonymous">
-    <link rel="preload" href="/fonts/zilla-slab-v6-latin-600.woff2" as="font" crossorigin="anonymous">
-    <link rel="preload" href="/fonts/inter-v7-latin-600.woff2" as="font" crossorigin="anonymous">
-    <link rel="preload" href="/fonts/inter-v7-latin-500.woff2" as="font" crossorigin="anonymous">
-    {{ head }}
-    <!--preload-links-->
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/img/apple-touch-icon.png?v=20230218">
+  <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32x32.png?v=20230218">
+  <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon-16x16.png?v=20230218">
+  <link rel="mask-icon" href="/img/safari-pinned-tab.svg?v=20230218" color="#232736">
+  <link rel="shortcut icon" href="/img/favicon.ico?v=20230218">
+  <meta name="msapplication-TileColor" content="#232736">
+  <meta name="theme-color" content="#ffffff">
+  <link rel="preload" href="/fonts/inter-v7-latin-regular.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="/fonts/inter-v7-latin-700.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="/fonts/zilla-slab-v6-latin-600.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="/fonts/inter-v7-latin-600.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="/fonts/inter-v7-latin-500.woff2" as="font" crossorigin="anonymous">
+  <!--preload-links-->
+  <!--headTags-->
 </head>
 <body {{ bodyAttrs }}>
-<div id="body-prepend">{{ bodyPrepend }}</div>
+<div id="body-prepend"><!--bodyTagsOpen--></div>
 <div id="app"><!--app-html--></div>
 <script type="module" src="/src/entry-client.js"></script>
-{{ bodyAppend }}
+<!--bodyTags-->
 </body>
 </html>
