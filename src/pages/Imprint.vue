@@ -31,7 +31,10 @@ const { t } = useI18n();
 setMeta(
   {
     title: t(`meta.imprint.title`),
-    description: t("meta.home.description"),
+    meta: {
+      name: "description",
+      content: t("meta.home.description"),
+    },
   },
   t
 );

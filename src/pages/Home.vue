@@ -69,7 +69,10 @@ const { t, locale } = useI18n();
 
 setMeta(
   {
-    description: t("meta.home.description"),
+    meta: {
+      name: "description",
+      content: t("meta.home.description"),
+    },
   },
   t
 );

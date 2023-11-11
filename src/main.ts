@@ -1,26 +1,11 @@
 import App from "@/App.vue";
 import { createSSRApp } from "vue";
 import { createRouter } from "@/router/";
-import {
-  createMetaManager as createVueMetaManager,
-  deepestResolver,
-  defaultConfig,
-} from "vue-meta";
 import { loadLocaleMessages, setupI18n } from "@/services/i18n";
+import { createHead } from "@unhead/vue";
 
 export function createApp() {
-  const createMetaManager = (isSSR = false) =>
-    createVueMetaManager(
-      isSSR,
-      {
-        ...defaultConfig,
-        esi: {
-          group: true,
-          namespaced: true,
-        },
-      },
-      deepestResolver
-    );
+  const head = createHead();
 
   const i18n = setupI18n({
     legacy: false,
@@ -33,11 +18,10 @@ export function createApp() {
 
   const app = createSSRApp(App);
   const router = createRouter(i18n);
-  const metaManager = createMetaManager(import.meta.env.SSR);
 
-  app.use(metaManager);
   app.use(router);
   app.use(i18n);
+  app.use(head);
 
-  return { app, router, metaManager };
+  return { app, router, head };
 }
