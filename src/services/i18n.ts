@@ -22,17 +22,6 @@ export function setI18nLanguage(i18n: I18n, locale: string) {
   }
 
   if (typeof document !== "undefined") {
-    // @ts-ignore
-    document.querySelector("html").setAttribute("lang", locale);
+    document.querySelector("html")?.setAttribute("lang", locale);
   }
-}
-
-export async function loadLocaleMessages(i18n: I18n, locale: string) {
-  // load locale messages with dynamic import
-  const messages = await import(
-    /* webpackChunkName: "locale-[request]" */ `../locales/${locale}.json`
-  );
-
-  // set locale and locale message
-  i18n.global.setLocaleMessage(locale, messages.default);
 }

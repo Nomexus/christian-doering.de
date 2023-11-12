@@ -3,11 +3,7 @@ import {
   createRouter as _createRouter,
   createWebHistory,
 } from "vue-router";
-import {
-  loadLocaleMessages,
-  setI18nLanguage,
-  SUPPORT_LOCALES,
-} from "@/services/i18n";
+import { setI18nLanguage, SUPPORT_LOCALES } from "@/services/i18n";
 import { I18n } from "vue-i18n";
 
 const routes = [
@@ -62,10 +58,6 @@ export function createRouter(i18n: I18n) {
 
     if (!SUPPORT_LOCALES.includes(paramsLocale)) {
       return next(`/de`);
-    }
-
-    if (!i18n.global.availableLocales.includes(paramsLocale)) {
-      await loadLocaleMessages(i18n, paramsLocale);
     }
 
     setI18nLanguage(i18n, paramsLocale);
