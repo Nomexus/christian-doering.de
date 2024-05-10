@@ -6,6 +6,7 @@ import { fileURLToPath } from "node:url";
 import { renderSSRHead } from "@unhead/ssr";
 
 const isTest = process.env.NODE_ENV === "test" || !!process.env.VITE_TEST_BUILD;
+const APP_NODE_PORT = process.env.APP_NODE_PORT || 8080;
 
 async function createServer(
   root = process.cwd(),
@@ -141,8 +142,8 @@ async function createServer(
 if (!isTest) {
   createServer()
     .then(({ app }) =>
-      app.listen(8080, () => {
-        console.log("http://localhost:8080");
+      app.listen(APP_NODE_PORT, () => {
+        console.log("http://localhost:" + APP_NODE_PORT);
       })
     )
     .catch(undefined);
