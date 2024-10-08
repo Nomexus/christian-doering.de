@@ -20,3 +20,6 @@ dist-ssr
 
 .env
 .currenthash
+public/assets
+public/index.html
+public/ssr-manifest.json

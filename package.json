@@ -9,7 +9,7 @@
     "dev": "node server.cjs",
     "build:client": "vite build --outDir dist/client --ssrManifest",
     "build:server": "vite build --outDir dist/server --ssr src/entry-server.js",
-    "build": "npm run build:client && npm run build:server"
+    "build": "npm run build:client && npm run build:server && cp -rf dist/client/* public"
   },
   "dependencies": {
     "@unhead/ssr": "^1.8.3",
