@@ -3,10 +3,10 @@ import vue from "@vitejs/plugin-vue";
 import vueDevTools from "vite-plugin-vue-devtools";
 import { fileURLToPath, URL } from "node:url";
 
-// https://vitejs.dev/config/
-export default defineConfig({
-  plugins: [vue(), vueDevTools()],
-  server: {
+let server = {};
+
+if (process.env.DDEV_PRIMARY_URL !== undefined) {
+  server = {
     host: "0.0.0.0",
     port: 8080,
     strictPort: true,
@@ -22,7 +22,13 @@ export default defineConfig({
     cors: {
       origin: /https?:\/\/([A-Za-z0-9\-\.]+)?(\.ddev\.site)(?::\d+)?$/,
     },
-  },
+  };
+}
+
+// https://vitejs.dev/config/
+export default defineConfig({
+  plugins: [vue(), vueDevTools()],
+  server: server,
   resolve: {
     alias: {
       "@": fileURLToPath(new URL("./src", import.meta.url)),
