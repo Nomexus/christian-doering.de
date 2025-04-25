@@ -1,0 +1,7 @@
+services:
+  web:
+    expose:
+      - 3001
+    environment:
+      - HTTP_EXPOSE=${DDEV_MAILHOG_PORT}:8025,80:8080,24678:24678
+      - HTTPS_EXPOSE=${DDEV_MAILHOG_HTTPS_PORT}:8025,443:8080,24678:24678

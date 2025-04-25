@@ -8,6 +8,8 @@ import { renderSSRHead } from "@unhead/ssr";
 const isTest = process.env.NODE_ENV === "test" || !!process.env.VITE_TEST_BUILD;
 const APP_NODE_PORT = process.env.APP_NODE_PORT || 8080;
 
+const DDEV_URL = process.env.DDEV_PROJECT + ".ddev.site";
+
 async function createServer(
   root = process.cwd(),
   isProd = process.env.NODE_ENV === "production"
@@ -54,10 +56,10 @@ async function createServer(
       helmet({
         contentSecurityPolicy: {
           directives: {
-            "default-src": ["'self'", "localhost"],
+            "default-src": ["'self'", DDEV_URL],
             "script-src": ["'self'", "'unsafe-inline'", "'unsafe-eval'"],
-            "connect-src": ["'self'", "localhost", "ws://localhost:24678"],
-            "img-src": ["'self'"],
+            "connect-src": ["'self'", DDEV_URL, "wss://" + DDEV_URL + ":24678"],
+            "img-src": ["'self'", "data:"],
           },
         },
         crossOriginResourcePolicy: false,
@@ -72,7 +74,7 @@ async function createServer(
             "default-src": ["'self'"],
             "script-src": ["'self'", "'unsafe-inline'", "'unsafe-eval'"],
             "connect-src": ["'self'"],
-            "img-src": ["'self'"],
+            "img-src": ["'self'", "data:"],
           },
         },
         crossOriginResourcePolicy: false,
@@ -143,7 +145,7 @@ if (!isTest) {
   createServer()
     .then(({ app }) =>
       app.listen(APP_NODE_PORT, () => {
-        console.log("http://localhost:" + APP_NODE_PORT);
+        console.log(process.env.DDEV_PRIMARY_URL);
       })
     )
     .catch(undefined);
