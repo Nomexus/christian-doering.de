@@ -42,7 +42,7 @@ setMeta(
 
 const projects = [
   {
-    link: "https://www.rezepte-teilen.de",
+    link: null,
     show: "",
     title: t("projects.recipes_book.title"),
     img: "/img/projects/rezepte-teilen.de",
