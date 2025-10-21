@@ -1,12 +1,14 @@
+@use "../variables/colors";
+
 .badge {
   display: inline-block;
-  background-color: $link-active;
-  color: $background-color;
+  background-color: colors.$link-active;
+  color: colors.$background-color;
   border-radius: 0.25rem;
   font-size: 0.75rem;
   padding: 0.0625rem 0.25rem;
   font-weight: 600;
-  border: 2px solid $link-active;
+  border: 2px solid colors.$link-active;
   transition: all 0.3s ease-in-out;
 
   + .badge {
@@ -16,12 +18,12 @@
 
   .tech-filter & {
     background-color: transparent;
-    border: 2px solid $link-active;
-    color: $link-active;
+    border: 2px solid colors.$link-active;
+    color: colors.$link-active;
 
     &.is-active {
-      background-color: $link-active;
-      color: $background-color;
+      background-color: colors.$link-active;
+      color: colors.$background-color;
     }
   }
 }

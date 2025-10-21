@@ -1,5 +1,8 @@
+@use "../variables/colors";
+@use "../variables/sizes";
+
 #app {
-  max-width: $page-width;
+  max-width: sizes.$page-width;
   width: 100%;
   margin: 0 auto;
   min-height: 100vh;
@@ -50,8 +53,8 @@ code {
 .button,
 .cta-button {
   display: inline-block;
-  color: $link-active;
-  border: 2px solid $link-active;
+  color: colors.$link-active;
+  border: 2px solid colors.$link-active;
   border-radius: 5px;
   cursor: pointer;
   padding: .75rem;
@@ -64,8 +67,8 @@ code {
   }
 
   &:hover {
-    background-color: $link-active;
-    color: $background-color;
+    background-color: colors.$link-active;
+    color: colors.$background-color;
   }
 }
 

@@ -1,10 +1,13 @@
+@use "../variables/colors";
+@use "../variables/sizes";
+
 .resume-default {
   margin-top: 2.5rem;
 
   h2 {
     margin: 1.5rem 0 1.5rem;
     padding: 0 2rem 1rem 20rem;
-    border-bottom: 0.25rem solid $link-active;
+    border-bottom: 0.25rem solid colors.$link-active;
     width: auto;
     display: inline-block;
   }
@@ -14,7 +17,7 @@
   margin-bottom: 1rem;
   justify-content: center;
 
-  @media(min-width: $tablet-breakpoint) {
+  @media(min-width: sizes.$tablet-breakpoint) {
     display: flex;
     flex-direction: row;
     align-items: flex-start;
@@ -25,7 +28,7 @@
     font-size: 1rem;
     padding: 0 0 1rem 0;
 
-    @media(min-width: $tablet-breakpoint) {
+    @media(min-width: sizes.$tablet-breakpoint) {
       min-width: 16rem;
       margin: 0 0 0 1rem;
       width: 50%;
@@ -41,12 +44,12 @@
     .resume-employer {
       display: inline-block;
       padding: 0.325rem 0 0;
-      border-top: 0.125rem solid $link-active;
+      border-top: 0.125rem solid colors.$link-active;
     }
   }
 
   .resume-default-row-right {
-    @media(min-width: $tablet-breakpoint) {
+    @media(min-width: sizes.$tablet-breakpoint) {
       text-align: right;
       padding: 0 1rem 0 0;
       width: 50%;

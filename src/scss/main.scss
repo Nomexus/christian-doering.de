@@ -1,7 +1,9 @@
-@import "variables";
-@import "modules";
-@import "components";
-@import "modules/helper";
+@use "sass:color";
+@use "variables";
+@use "modules";
+@use "components";
+@use "modules/helper";
+@use "variables/colors";
 
 * {
   box-sizing: border-box;
@@ -14,7 +16,7 @@ html {
 
 html,
 body {
-  background: $background-color;
+  background: colors.$background-color;
   min-height: 90vh;
 
   ::-webkit-scrollbar {
@@ -23,17 +25,17 @@ body {
 
   /* Track */
   ::-webkit-scrollbar-track {
-    background: darken($background-color, 3%);
+    background: color.adjust(colors.$background-color, $lightness: -3%);
   }
 
   /* Handle */
   ::-webkit-scrollbar-thumb {
-    background: $link-active;
+    background: colors.$link-active;
   }
 
   /* Handle on hover */
   ::-webkit-scrollbar-thumb:hover {
-    background: $link;
+    background: colors.$link;
   }
 }
 

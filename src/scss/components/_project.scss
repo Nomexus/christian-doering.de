@@ -1,3 +1,5 @@
+@use "../variables/sizes";
+
 @keyframes fadeOut {
   0% {
     opacity: 1;
@@ -38,7 +40,7 @@
     height: auto;
     margin-bottom: 1rem;
 
-    @media(min-width: $mobile-landscape-breakpoint) {
+    @media(min-width: sizes.$mobile-landscape-breakpoint) {
       width: auto;
       margin: 0;
     }
@@ -47,7 +49,7 @@
   .inner {
     padding-bottom: 3rem;
 
-    @media(min-width: $mobile-landscape-breakpoint) {
+    @media(min-width: sizes.$mobile-landscape-breakpoint) {
       display: flex;
       flex-direction: row;
       align-items: flex-start;
@@ -80,7 +82,7 @@
 .project-content {
   flex-grow: 1;
 
-  @media(min-width: $mobile-landscape-breakpoint) {
+  @media(min-width: sizes.$mobile-landscape-breakpoint) {
     padding-left: 2rem;
   }
 

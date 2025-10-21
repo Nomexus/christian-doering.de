@@ -1,3 +1,5 @@
+@use "../variables/sizes";
+
 .mt-0 {
   margin-top: 0;
 }
@@ -47,13 +49,13 @@
 }
 
 .ml--2-mobile-landscape {
-  @media(max-width: $mobile-landscape-breakpoint) {
+  @media(max-width: sizes.$mobile-landscape-breakpoint) {
     margin-left: -2rem;
   }
 }
 
 .mr--2-mobile-landscape {
-  @media(max-width: $mobile-landscape-breakpoint) {
+  @media(max-width: sizes.$mobile-landscape-breakpoint) {
     margin-right: -2rem;
   }
 }

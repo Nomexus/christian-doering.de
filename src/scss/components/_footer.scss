@@ -1,3 +1,5 @@
+@use "../variables/colors";
+
 footer {
   text-align: center;
   margin: auto 0 3rem 0;
@@ -12,7 +14,7 @@ footer {
       display: inline-block;
 
       a.router-link-active {
-        color: $link-active;
+        color: colors.$link-active;
       }
     }
   }
