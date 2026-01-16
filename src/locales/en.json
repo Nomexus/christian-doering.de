@@ -6,18 +6,18 @@
     "contact": "Contact"
   },
   "meta": {
-    "default": "Christian Döring - Full-Stack Webdeveloper",
+    "default": "Christian Dengel - Full-Stack Webdeveloper",
     "home": {
       "title": "About me",
-      "description": "Christian Döring, full stack web developer, ethical hacker, specializing in PHP and JavaScript"
+      "description": "Christian Dengel, full stack web developer, ethical hacker, specializing in PHP and JavaScript"
     },
     "projects": {
       "title": "Projects",
-      "description": "Vue, Phalcon and Symfony projects of Christian Döring, full stack web developer"
+      "description": "Vue, Phalcon and Symfony projects of Christian Dengel, full stack web developer"
     },
     "contact": {
       "title": "Contact",
-      "description": "Contact information of Christian Döring, full stack web developer"
+      "description": "Contact information of Christian Dengel, full stack web developer"
     },
     "imprint": {
       "title": "Imprint"
@@ -35,10 +35,10 @@
     "dataPrivacy": "Data Privacy"
   },
   "misc": {
-    "myName": "Christian Döring"
+    "myName": "Christian Dengel"
   },
   "home": {
-    "greeting": "<span>Hi, i'm</span>Christian Döring",
+    "greeting": "<span>Hi, i'm</span>Christian Dengel",
     "intro": "<p>Passionate software developer and ethical hacker specializing in <code>Symfony</code>, <code>Vue</code> and <code>ExtJS</code>. Over 16 years experience in developing and publishing large- and small-scale projects. Experienced in web app pentesting.</p>",
     "title": "full-stack webdeveloper, ethical hacker",
     "myExperience": "Professional experience",

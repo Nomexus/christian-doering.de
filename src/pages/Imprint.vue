@@ -5,7 +5,7 @@
     <div class="content-medium">
       <h2>Angaben gemäß § 5 TMG</h2>
       <p>
-        Christian Döring
+        Christian Dengel
         <br />
         Prinz-Regent-Str. 111
         <br />
