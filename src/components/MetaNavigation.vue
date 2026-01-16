@@ -9,7 +9,7 @@
       </a>
       <a
         rel="noopener nofollow"
-        href="https://www.xing.com/profile/Christian_Doering058740"
+        href="https://www.xing.com/profile/Christian_Dengel043051/"
         target="_blank">
         XING
       </a>

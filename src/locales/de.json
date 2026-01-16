@@ -6,17 +6,17 @@
     "projects": "Projekte"
   },
   "meta": {
-    "default": "Christian Dengel - Full-Stack Webentwickler",
+    "default": "Christian Dengel - Softwareentwickler, Security Enthusiast",
     "home": {
-      "description": "Christian Dengel, Full-Stack Webentwickler, Ethical Hacker - spezialisiert auf PHP and JavaScript"
+      "description": "Christian Dengel, Softwareentwickler, Security Enthusiast"
     },
     "projects": {
       "title": "Projekte",
-      "description": "Vue, Phalcon und Symfony Projekte von Christian Dengel, Full-Stack Webentwickler"
+      "description": "Vue und Symfony Projekte von Christian Dengel"
     },
     "contact": {
       "title": "Kontakt",
-      "description": "Kontakt Informationen von Christian Dengel, Full-Stack Webentwickler"
+      "description": "Kontakt Informationen von Christian Dengel"
     },
     "imprint": {
       "title": "Impressum"
@@ -38,11 +38,11 @@
   },
   "home": {
     "greeting": "<span>Hi, ich bin </span>Christian Dengel",
-    "intro": "<p>Leidenschaftlicher Software-Entwickler und Ethical Hacker, spezialisiert auf <code>Symfony</code>, <code>Vue</code> und <code>ExtJS</code>. Über 16 Jahre Erfahrung in der Entwicklung und Veröffentlichung von großen und kleinen Projekten. Erfahrung in Web-App Pentesting.</p>",
-    "title": "Full-Stack Webentwickler - Ethical Hacker",
+    "intro": "<p>Leidenschaftlicher Software-Entwickler und Security Enthusiast, spezialisiert auf <code>Symfony</code>, <code>Vue</code> und <code>ExtJS</code>. Entwicklung und Veröffentlichung von großen und kleinen Projekten seit 2008. Erfahrung in Web-App Pentesting.</p>",
+    "title": "Softwareentwickler, Security Enthusiast",
     "myExperience": "Berufserfahrung",
     "allProjects": "Alle Projekte ansehen",
-    "currentProjects": "Aktuelle Projekte",
+    "currentProjects": "Projekte",
     "contactMe": "Kontakt aufnehmen"
   },
   "experience": {
@@ -74,7 +74,7 @@
     },
     "farmparadies_2022": {
       "title": "FarmParadies.de - Bauernhof Browsergame",
-      "description": "<p>Relaunch des Browsergames auf der Basis von <code>Vue</code> und <code>Symfony</code>. Derzeit in Entwicklung.</p>"
+      "description": "<p>Browsergame auf Basis von <code>Vue</code>, <code>Symfony</code> und <code>Mercure</code></p>"
     },
     "project_system": {
       "title": "Projekt-, Aufgaben- & Zeitmanagement System",
