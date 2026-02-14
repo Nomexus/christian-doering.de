@@ -2,7 +2,7 @@ import App from "@/App.vue";
 import { createSSRApp } from "vue";
 import { createRouter } from "@/router/";
 import { setupI18n } from "@/services/i18n";
-import { createHead } from "@unhead/vue";
+import { createHead } from "@unhead/vue/client";
 import * as messages_de from "@/locales/de.json";
 import * as messages_en from "@/locales/en.json";
 
