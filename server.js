@@ -12,7 +12,7 @@ const DDEV_URL = process.env.DDEV_PROJECT + ".ddev.site";
 
 async function createServer(
   root = process.cwd(),
-  isProd = process.env.NODE_ENV === "production"
+  isProd = process.env.NODE_ENV === "production",
 ) {
   const __dirname = path.dirname(fileURLToPath(import.meta.url));
   const resolve = (p) => path.resolve(__dirname, p);
@@ -23,7 +23,7 @@ async function createServer(
 
   const manifest = isProd
     ? JSON.parse(
-        fs.readFileSync(resolve("./dist/client/ssr-manifest.json"), "utf8")
+        fs.readFileSync(resolve("./dist/client/ssr-manifest.json"), "utf8"),
       )
     : {};
 
@@ -64,7 +64,7 @@ async function createServer(
         },
         crossOriginResourcePolicy: false,
         crossOriginEmbedderPolicy: false,
-      })
+      }),
     );
   } else {
     app.use(
@@ -79,18 +79,18 @@ async function createServer(
         },
         crossOriginResourcePolicy: false,
         crossOriginEmbedderPolicy: false,
-      })
+      }),
     );
     app.use((await import("compression")).default());
     app.use(
       (await import("serve-static")).default(resolve("dist/client"), {
         index: false,
         maxAge: "90 days",
-      })
+      }),
     );
   }
 
-  app.use("*", async (req, res) => {
+  app.use("/*splat", async (req, res) => {
     try {
       const url = req.originalUrl;
 
@@ -107,7 +107,7 @@ async function createServer(
 
       const [appHtml, preloadLinks, ctx, router, head] = await render(
         url,
-        manifest
+        manifest,
       );
 
       if (!ctx.teleports) {
@@ -146,7 +146,7 @@ if (!isTest) {
     .then(({ app }) =>
       app.listen(APP_NODE_PORT, () => {
         console.log(process.env.DDEV_PRIMARY_URL);
-      })
+      }),
     )
     .catch(undefined);
 }
