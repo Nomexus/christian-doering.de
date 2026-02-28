@@ -90,7 +90,7 @@ async function createServer(
     );
   }
 
-  app.use("/*", async (req, res) => {
+  app.use("/{*splat}", async (req, res) => {
     try {
       const url = req.originalUrl;
 
