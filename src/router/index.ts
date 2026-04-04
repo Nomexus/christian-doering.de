@@ -1,8 +1,4 @@
-import {
-  createMemoryHistory,
-  createRouter as _createRouter,
-  createWebHistory,
-} from "vue-router";
+import { createMemoryHistory, createRouter as _createRouter, createWebHistory } from "vue-router";
 import { setI18nLanguage, SUPPORT_LOCALES } from "@/services/i18n";
 import { I18n } from "vue-i18n";
 
@@ -42,7 +38,7 @@ export function createRouter(i18n: I18n) {
     routes,
   });
 
-  router.beforeEach(async (to, from, next) => {
+  router.beforeEach(async (to, from) => {
     if (typeof window !== "undefined") {
       window.scrollTo(0, 0);
     }
@@ -53,16 +49,14 @@ export function createRouter(i18n: I18n) {
       typeof paramsLocale === "undefined" ||
       typeof paramsLocale === "object"
     ) {
-      return next("/de");
+      return "/de";
     }
 
     if (!SUPPORT_LOCALES.includes(paramsLocale)) {
-      return next(`/de`);
+      return `/de`;
     }
 
     setI18nLanguage(i18n, paramsLocale);
-
-    return next();
   });
 
   return router;
