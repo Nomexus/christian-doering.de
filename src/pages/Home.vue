@@ -87,7 +87,6 @@ const projects = [
     description: t("projects.farmparadies_2022.description"),
   },
   {
-    link: "https://www.rezepte-teilen.de",
     show: "",
     title: t("projects.recipes_book.title"),
     img: "/img/projects/rezepte-teilen.de",

@@ -6,9 +6,9 @@
     "projects": "Projekte"
   },
   "meta": {
-    "default": "Christian Dengel - Softwareentwickler, Security Enthusiast",
+    "default": "Christian Dengel - Softwareentwicklung, IT-Security",
     "home": {
-      "description": "Christian Dengel, Softwareentwickler, Security Enthusiast"
+      "description": "Christian Dengel, Softwareentwicklung, IT-Security"
     },
     "projects": {
       "title": "Projekte",
@@ -39,7 +39,7 @@
   "home": {
     "greeting": "<span>Hi, ich bin </span>Christian Dengel",
     "intro": "<p>Leidenschaftlicher Software-Entwickler und Security Enthusiast, spezialisiert auf <code>Symfony</code>, <code>Vue</code> und <code>ExtJS</code>. Entwicklung und Veröffentlichung von großen und kleinen Projekten seit 2008. Erfahrung in Web-App Pentesting.</p>",
-    "title": "Softwareentwickler, Security Enthusiast",
+    "title": "Softwareentwicklung, IT-Security",
     "myExperience": "Berufserfahrung",
     "allProjects": "Alle Projekte ansehen",
     "currentProjects": "Projekte",
@@ -47,7 +47,7 @@
   },
   "experience": {
     "npo": {
-      "title": "Webentwickler, Pentester",
+      "title": "Webentwickler, Projektleiter, IT-Security",
       "employer": "NPO Applications GmbH, Oberhausen"
     },
     "ow": {
